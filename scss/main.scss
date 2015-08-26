@@ -1,24 +1,34 @@
+
+// .cards {
+//   box-shadow:0 1px 2px #aaa;
+//   background:white;
+//   border-radius:3px;
+//   //animation:fly-in-from-left .5s 1s ease both;
+//   transform-origin:top left;
+//   margin-bottom: 20px;
+//   img {
+//     width: 100%;
+//   }
+//   .content {
+//     padding:1.5rem;
+//     text-align: center;
+//   }
+// }
+
 .card {
-  box-shadow:0 1px 2px #aaa;
-  background:white;
-  border-radius:3px;
-  //animation:fly-in-from-left .5s 1s ease both;
-  transform-origin:top left;
-  margin-bottom: 20px;
-  img {
-    width: 100%;
-  }
-  .content {
-    padding:1.5rem;
-  }
+  // Overrinding the default card margins to center it
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: auto;
+  animation:fly-in-from-left .5s 1s ease both;
 }
 
 /* Media queries */
 
 @media screen and (min-width: 50em) {
- .card {
-  width: 50em;
- }
+  .card {
+    width: 50em
+  }
 }
 
 /* Animations */

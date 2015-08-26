@@ -1,0 +1,17 @@
+.card {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: auto;
+  animation: fly-in-from-left .5s 1s ease both; }
+
+/* Media queries */
+@media screen and (min-width: 50em) {
+  .card {
+    width: 50em; } }
+/* Animations */
+@keyframes fly-in-from-left {
+  from {
+    transform: translateY(15rem) rotate(15deg);
+    opacity: 0; } }
+
+/*# sourceMappingURL=main.css.map */
