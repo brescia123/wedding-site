@@ -1,41 +1,65 @@
+@import "mixins";
+@import "colors";
 
-// .cards {
-//   box-shadow:0 1px 2px #aaa;
-//   background:white;
-//   border-radius:3px;
-//   //animation:fly-in-from-left .5s 1s ease both;
-//   transform-origin:top left;
-//   margin-bottom: 20px;
-//   img {
-//     width: 100%;
-//   }
-//   .content {
-//     padding:1.5rem;
-//     text-align: center;
-//   }
-// }
+body {
+  background-color: $bg-color;
+}
+
+.title {
+  margin-bottom: 2em;
+}
 
 .card {
-  // Overrinding the default card margins to center it
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: auto;
-  animation:fly-in-from-left .5s 1s ease both;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 .2em #aaa;
+  background: white;
+  @include transition(.2s);
+  animation: fly-in 0.5s 1s ease both;
+  transform-origin: top left;
+
+  &:hover {
+    box-shadow: 0 0 1.5em #aaa;
+  }
+
+  .card-content {
+    position: relative;
+
+    .card-cover {
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .card-detail {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .card-title {
+    padding: 1.5rem;
+    font-size: 2em;
+    text-align: center;
+  }
 }
 
 /* Media queries */
-
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 800px) {
   .card {
-    width: 50em
+    max-width: 800px;
   }
 }
 
 /* Animations */
-
-@keyframes fly-in-from-left {
+@keyframes fly-in {
   from {
-    transform:translateY(15rem) rotate(15deg);
-    opacity:0;
+    transform: translateY(15rem);
+    opacity: 0;
   }
 }
