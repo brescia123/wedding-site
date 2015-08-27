@@ -36,9 +36,17 @@ body {
 
     .card-detail {
       width: 100%;
+      height: 100%;
       position: absolute;
+      @include transition(.5s);
+      opacity: 0;
+      background-color: white;
       top: 0;
       left: 0;
+    }
+
+    .show-detail {
+      opacity: 1;
     }
   }
 
