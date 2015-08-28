@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/PACE/themes/black/pace-theme-big-counter.css">
   <style>
     body {
       padding-bottom: 20px;
@@ -23,11 +24,16 @@
 </head>
 
 <body>
-  <div class="title">
-    <h1 class="text-center"> Giulio e Marta </h1>
-    <h4 class="text-center"> 10 Ottobre 2015</h4>
+  <div id="cover">
+    <div class="title">
+      <h1 class="text-center"> Giulio e Marta </h1>
+      <h4 class="text-center"> 10 Ottobre 2015</h4>
+    </div>
+    <div class="motto vcenter">
+      <h1 class="text-center"> "Ho fatto conoscere loro il tuo nome e lo farò conoscere, perché l'amore con il quale mi hai amato sia in essi e io in loro"</h1>
+      <h6 class="text-right">Gv 17,26</h6>
+    </div>
   </div>
-
   <div class="main-container">
     <div class="card center-block">
       <div class="card-content">
@@ -122,17 +128,14 @@
   </footer>
   </div>
   <!-- /container -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-  </script>
-
-  <script src="js/vendor/bootstrap.min.js"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMcTh4qTDO1KW2QFNxFCoPqHuZ_iaZPz0&libraries=places"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/PACE/pace.min.js"></script>
 
   <script src="js/main.js"></script>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMcTh4qTDO1KW2QFNxFCoPqHuZ_iaZPz0&libraries=places"></script>
+
+  <script src="js/initMaps.js"></script>
 </body>
 
 </html>

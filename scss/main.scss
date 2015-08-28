@@ -5,8 +5,40 @@ body {
   background-color: $bg-color;
 }
 
-.title {
-  margin-bottom: 2em;
+#cover {
+  width: 100%;
+  background-image: url("../img/Presenza.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+  -ms-filter: grayscale(70%);
+  filter:grayscale(70%);
+  margin-bottom: 50px;
+  position: relative;
+
+  .title {
+    h1 {
+      margin-top: 0;
+    }
+    margin-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  .motto {
+    margin: auto;
+    width: 70%;
+    vertical-align: middle;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: RGBA(40, 44, 53, 0.3)
+  }
 }
 
 .card {
@@ -72,8 +104,7 @@ body {
       .map {
         width: 90%;
         height: 70%;
-        margin: auto;
-        margin-top: 2em;
+        margin: 2em auto auto;
       }
 
       .map-button {
@@ -109,6 +140,7 @@ body {
   .detail-small {
     display: none;
   }
+
   .detail-small {
     display: none;
   }
