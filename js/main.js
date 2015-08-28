@@ -1,8 +1,10 @@
 $(function() {
   initMap();
-  $(".card").click(function(index) {
-    console.log("ok");
-    $(this).find(".card-detail").toggleClass("show-detail");
+  $(".card-cover").click(function(e) {
+    $(this).toggleClass("show-detail");
+  });
+  $('.close-button').click(function (e) {
+    $(this).parent().parent().find('.card-cover').removeClass('show-detail');
   });
 });
 
