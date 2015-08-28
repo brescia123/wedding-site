@@ -14,7 +14,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 0 .2em #aaa;
+  box-shadow: 0 0 0.2em #aaa;
   background: white;
   @include transition(.2s);
   animation: fly-in 0.5s 1s ease both;
@@ -43,6 +43,19 @@ body {
       background-color: white;
       top: 0;
       left: 0;
+      padding: 30px;
+
+      p {
+        width: 70%;
+        margin: auto;
+      }
+
+      .map {
+        width: 90%;
+        height: 70%;
+        margin: auto;
+        padding-top: 10em;
+      }
     }
 
     .show-detail {
@@ -55,6 +68,21 @@ body {
     font-size: 2em;
     text-align: center;
   }
+}
+
+button {
+  display: inline-block;
+  margin: 0 1px 0 0;
+  padding: 15px 45px;
+  font-family: "Bitter",serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
 }
 
 /* Media queries */
