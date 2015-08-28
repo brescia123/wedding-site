@@ -17,7 +17,7 @@ var initCeremonyMap = function() {
   var marker = new google.maps.Marker({
     map: map
   });
-  marker.setIcon('img/ic_wedding.png');
+  marker.setIcon('https://s3.eu-central-1.amazonaws.com/j-wedding-site/ic_wedding.png');
 
   // Get place datails
   service.getDetails({
