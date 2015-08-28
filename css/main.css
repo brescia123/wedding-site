@@ -9,7 +9,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 0 .2em #aaa;
+  box-shadow: 0 0 0.2em #aaa;
   background: white;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -39,13 +39,35 @@ body {
       opacity: 0;
       background-color: white;
       top: 0;
-      left: 0; }
+      left: 0;
+      padding: 30px; }
+      .card .card-content .card-detail p {
+        width: 70%;
+        margin: auto; }
+      .card .card-content .card-detail .map {
+        width: 90%;
+        height: 70%;
+        margin: auto;
+        padding-top: 10em; }
     .card .card-content .show-detail {
       opacity: 1; }
   .card .card-title {
     padding: 1.5rem;
     font-size: 2em;
     text-align: center; }
+
+button {
+  display: inline-block;
+  margin: 0 1px 0 0;
+  padding: 15px 45px;
+  font-family: "Bitter",serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0; }
+
+button:focus {
+  outline: none; }
 
 /* Media queries */
 @media screen and (min-width: 800px) {
