@@ -3,7 +3,7 @@ body {
 
 #cover {
   width: 100%;
-  background-image: url("../img/Presenza.jpg");
+  background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/Presenza.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
