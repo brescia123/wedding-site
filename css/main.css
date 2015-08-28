@@ -44,11 +44,17 @@ body {
       padding: 30px; }
       .card .card-content .card-detail .close-button {
         margin: 1em;
+        padding: 7px;
         position: absolute;
         top: 0;
         right: 0;
         font-size: 1.5em;
-        cursor: pointer; }
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 100%; }
+        .card .card-content .card-detail .close-button:hover {
+          background-color: black;
+          color: white; }
       .card .card-content .card-detail p {
         width: 70%;
         margin: auto; }
@@ -64,19 +70,6 @@ body {
     padding: 1.5rem;
     font-size: 2em;
     text-align: center; }
-
-button {
-  display: inline-block;
-  margin: 0 1px 0 0;
-  padding: 15px 45px;
-  font-family: "Bitter",serif;
-  line-height: 1.8;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0; }
-
-button:focus {
-  outline: none; }
 
 /* Media queries */
 @media screen and (min-width: 800px) {
