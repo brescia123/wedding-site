@@ -25,19 +25,20 @@ body {
     .card .card-content .card-cover {
       width: 100%;
       position: relative;
-      -webkit-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -ms-transition: all 0.5s linear;
-      transition: all 0.5s linear;
       top: 0;
       left: 0;
       cursor: pointer; }
     .card .card-content .card-detail {
       width: 100%;
       height: 100%;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
-      opacity: 1;
+      -webkit-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      transition: all 0.5s linear;
       background-color: white;
       top: 0;
       left: 0;
@@ -63,9 +64,9 @@ body {
         height: 70%;
         margin: auto;
         padding-top: 10em; }
-    .card .card-content .show-detail {
-      opacity: 0;
-      visibility: hidden; }
+    .card .card-content .show {
+      opacity: 1;
+      visibility: visible; }
   .card .card-title {
     padding: 1.5rem;
     font-size: 2em;

@@ -30,7 +30,6 @@ body {
     .card-cover {
       width: 100%;
       position: relative;
-      @include transition(.5s);
       top: 0;
       left: 0;
       cursor: pointer;
@@ -39,8 +38,10 @@ body {
     .card-detail {
       width: 100%;
       height: 100%;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
-      opacity: 1;
+      @include transition(.5s);
       background-color: white;
       top: 0;
       left: 0;
@@ -76,9 +77,9 @@ body {
       }
     }
 
-    .show-detail {
-      opacity: 0;
-      visibility: hidden;
+    .show {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

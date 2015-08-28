@@ -1,10 +1,13 @@
 $(function() {
+  //initMediaListener();
   initMap();
   $(".card-cover").click(function(e) {
-    $(this).toggleClass("show-detail");
+    // $(this).toggleClass('hide');
+    $(this).siblings('.card-detail').toggleClass('show');
   });
-  $('.close-button').click(function (e) {
-    $(this).parent().parent().find('.card-cover').removeClass('show-detail');
+  $('.close-button').click(function(e) {
+    // $(this).parent().parent().find('.card-cover').toggleClass('hide');
+    $(this).parent().parent().find('.card-detail').toggleClass('show');
   });
 });
 
@@ -58,4 +61,23 @@ var initMap = function() {
       });
     }
   });
+}
+
+var initMediaListener = function() {
+  if (matchMedia) {
+    var mq = window.matchMedia('min-width: 800px');
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+  }
+
+  // media query change
+  function WidthChange(mq) {
+
+    if (mq.matches) {
+      console.log('> 800px');
+    } else {
+      console.log('< 800px');
+    }
+
+  }
 }
