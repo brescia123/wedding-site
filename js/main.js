@@ -1,19 +1,16 @@
 $(function() {
-  //initMediaListener();
-  initMap();
+  initCeremonyMap();
+  initParkingMap();
   $(".card-cover").click(function(e) {
-    // $(this).toggleClass('hide');
     $(this).siblings('.card-detail').toggleClass('show');
   });
   $('.close-button').click(function(e) {
-    // $(this).parent().parent().find('.card-cover').toggleClass('hide');
     $(this).parent().parent().find('.card-detail').toggleClass('show');
   });
 });
 
-var initMap = function() {
-  var map;
-  map = new google.maps.Map($('#ceremony-map').get(0), {
+var initCeremonyMap = function() {
+  var map = new google.maps.Map($('#ceremony-map').get(0), {
     center: {
       lat: 44.3098361,
       lng: 9.3475839
@@ -26,6 +23,7 @@ var initMap = function() {
   var marker = new google.maps.Marker({
     map: map
   });
+  marker.setIcon('img/ic_wedding.png');
 
   // Get place datails
   service.getDetails({
@@ -56,28 +54,73 @@ var initMap = function() {
       infowindow.open(map, marker);
 
       google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
         infowindow.open(map, this);
       });
     }
   });
 }
 
-var initMediaListener = function() {
-  if (matchMedia) {
-    var mq = window.matchMedia('min-width: 800px');
-    mq.addListener(WidthChange);
-    WidthChange(mq);
+var initParkingMap = function() {
+
+  var parkings = [{
+    location: {
+      lat: 44.3098361,
+      lng: 9.3475839
+    },
+    info: 'Cerimonia',
+    label: '',
+    icon: 'https://s3.eu-central-1.amazonaws.com/j-wedding-site/ic_wedding.png'
+  }, {
+    location: {
+      lat: 44.3084675,
+      lng: 9.3489485
+    },
+    info: 'Via Tommaso Sanguineti, 9',
+    label: 'P'
+  }, {
+    location: {
+      lat: 44.311435,
+      lng: 9.347493
+    },
+    info: 'Via Carcara, 10',
+    label: 'P'
+  }, {
+    location: {
+      lat: 44.3092167,
+      lng: 9.3486832
+    },
+    info: 'Via della Pace, 1',
+    label: 'P'
+  }];
+
+  var map = new google.maps.Map($('#parking-map').get(0), {
+    center: {
+      lat: 44.3098361,
+      lng: 9.3475839
+    },
+    zoom: 16
+  });
+  var infowindow = new google.maps.InfoWindow();
+
+  for (parking of parkings) {
+    addMarker(parking.location, map, parking.label, parking.icon, parking.info);
   }
 
-  // media query change
-  function WidthChange(mq) {
+  function addMarker(location, map, label, icon, info) {
+    var infowindow = new google.maps.InfoWindow({
+      content: '<div><strong>' + info + '</strong><br>'
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      label: label,
+      icon: icon
+    });
 
-    if (mq.matches) {
-      console.log('> 800px');
-    } else {
-      console.log('< 800px');
-    }
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
 
+    return marker;
   }
 }

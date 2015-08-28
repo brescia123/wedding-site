@@ -63,7 +63,7 @@ body {
         width: 90%;
         height: 70%;
         margin: auto;
-        padding-top: 10em; }
+        margin-top: 2em; }
     .card .card-content .show {
       opacity: 1;
       visibility: visible; }
@@ -76,6 +76,12 @@ body {
 @media screen and (min-width: 800px) {
   .card {
     max-width: 800px; } }
+@media screen and (min-width: 600px) {
+  .map-button {
+    display: none; } }
+@media screen and (max-width: 600px) {
+  .map {
+    display: none; } }
 /* Animations */
 @keyframes fly-in {
   from {

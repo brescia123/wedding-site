@@ -58,7 +58,7 @@ body {
         border: 1px solid black;
         border-radius: 100%;
 
-        &:hover{
+        &:hover {
           background-color: black;
           color: white;
         }
@@ -73,7 +73,11 @@ body {
         width: 90%;
         height: 70%;
         margin: auto;
-        padding-top: 10em;
+        margin-top: 2em;
+      }
+
+      .map-button {
+
       }
     }
 
@@ -97,6 +101,17 @@ body {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .map-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .map {
+    display: none;
+  }
+}
 /* Animations */
 @keyframes fly-in {
   from {
