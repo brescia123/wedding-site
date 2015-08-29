@@ -9,8 +9,11 @@ $(function() {
 });
 
 var initCover = function() {
-  $('#cover').height($(window).height());
-  $(window).resize(function() {
-    $('#cover').height($(window).height());
-  });
+  var cover = $('#cover');
+  if (cover.height == 0) {
+    cover.height($(window).height());
+    $(window).resize(function() {
+      cover.height($(window).height());
+    });
+  }
 }
