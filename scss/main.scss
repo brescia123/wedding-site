@@ -11,6 +11,8 @@
   src: url("../fonts/SavoyeLetPlain.ttf");
 }
 
+$small-bp: 768px;
+
 body {
   font-family: savoye;
 
@@ -28,7 +30,7 @@ body {
     height: 52px;
     font-size: 46px;
     padding-bottom: -10px;
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: $small-bp) {
       font-size: 74px;
       height: 80px;
     }
@@ -37,7 +39,7 @@ body {
 
     img {
       width: 18px;
-      @media screen and (min-width: 480px) {
+      @media screen and (min-width: $small-bp) {
         width: 32px;
       }
     }
@@ -61,7 +63,7 @@ body {
     font-size: 42px;
     text-align: center;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: $small-bp) {
       top: 50px;
       font-size: 90px;
     }
