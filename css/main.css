@@ -9,7 +9,28 @@ body {
   font-size: 24px; }
 
 .container {
-  text-align: center; }
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.section {
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px; }
+  @media screen and (min-width: 768px) {
+    .section {
+      margin-bottom: 50px; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .section {
+      margin-bottom: 50px;
+      max-width: 480px; } }
+
+.section.section-full {
+  max-width: 100%; }
 
 .title .name {
   display: inline-block;
@@ -31,27 +52,50 @@ body {
   text-align: right;
   padding: 0; }
   .title .name.left img {
-    margin-right: 20px; }
+    margin-right: 10px; }
+    @media screen and (min-width: 768px) {
+      .title .name.left img {
+        margin-right: 20px; } }
 .title .and {
   display: inline-block;
   position: relative;
   top: 22px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: "Times New Roman", Times, serif;
   font-size: 42px;
   text-align: center; }
   @media screen and (min-width: 768px) {
     .title .and {
       top: 50px;
-      font-size: 90px; } }
+      font-size: 90px;
+      margin-left: 20px;
+      margin-right: 20px; } }
 .title .name.right {
   text-align: left;
   padding: 0; }
   .title .name.right img {
-    margin-left: 20px; }
+    margin-left: 10px; }
+    @media screen and (min-width: 768px) {
+      .title .name.right img {
+        margin-left: 20px; } }
 
-/* Media queries */
+.photo-cover {
+  height: 350px;
+  width: 100%;
+  background-image: url("../img/Presenza1440.jpg"); }
+  @media screen and (min-width: 768px) {
+    .photo-cover {
+      height: 650px; } }
+
+.phrase .phrase-text {
+  height: 100%;
+  margin: auto; }
+.phrase .phrase-image {
+  height: auto; }
+  .phrase .phrase-image img {
+    width: 100%; }
+
 /* Animations */
 @keyframes fly-in {
   from {
