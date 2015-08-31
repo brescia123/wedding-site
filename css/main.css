@@ -18,13 +18,13 @@ body {
   padding-bottom: -10px;
   border-bottom: solid #40826D;
   border-width: 1px; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     .title .name {
       font-size: 74px;
       height: 80px; } }
   .title .name img {
     width: 18px; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       .title .name img {
         width: 32px; } }
 .title .name.left {
@@ -41,7 +41,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 42px;
   text-align: center; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     .title .and {
       top: 50px;
       font-size: 90px; } }
