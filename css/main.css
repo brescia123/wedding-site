@@ -59,19 +59,20 @@ body {
 .title .and {
   display: inline-block;
   position: relative;
+  top: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: "Times New Roman", Times, serif;
+  font-size: 42px;
   text-align: center;
-  top: 50px;
-  font-size: 90px;
-  margin-left: 20px;
-  margin-right: 20px; }
-  @media screen and (max-width: 768px) {
+  background: green; }
+  @media screen and (min-width: 768px) {
     .title .and {
-      background-color: red;
-      top: 22px;
-      margin-left: 10px;
-      margin-right: 10px;
-      font-size: 42px; } }
+      background: red;
+      top: 50px;
+      font-size: 90px;
+      margin-left: 20px;
+      margin-right: 20px; } }
 .title .name.right {
   text-align: left;
   padding: 0; }
