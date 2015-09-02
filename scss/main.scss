@@ -96,6 +96,7 @@ body {
     margin-right: 20px;
 
     @media screen and (max-width: $medium-bp) {
+      background-color: red;
       top: 22px;
       margin-left: 10px;
       margin-right: 10px;
