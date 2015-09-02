@@ -1,9 +1,12 @@
 @font-face {
-  font-family: snell;
-  src: url("../fonts/SnellRoundhand.ttf"); }
-@font-face {
   font-family: savoye;
   src: url("../fonts/SavoyeLetPlain.ttf"); }
+@font-face {
+  font-family: herculanum;
+  src: url("../fonts/Herculanum.ttf"); }
+@font-face {
+  font-family: times;
+  src: url("../fonts/Times.ttf"); }
 body {
   font-family: savoye;
   font-size: 24px; }
@@ -20,6 +23,8 @@ body {
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
   max-width: 768px; }
   @media screen and (min-width: 768px) {
     .section {
@@ -62,7 +67,7 @@ body {
   top: 22px;
   margin-left: 10px;
   margin-right: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: times;
   font-size: 42px;
   text-align: center; }
   @media screen and (min-width: 768px) {
@@ -83,18 +88,29 @@ body {
 .photo-cover {
   height: 350px;
   width: 100%;
-  background-image: url("../img/Presenza1440.jpg"); }
+  background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/Presenza1440.jpg"); }
   @media screen and (min-width: 768px) {
     .photo-cover {
       height: 650px; } }
 
-.phrase .phrase-text {
-  height: 100%;
-  margin: auto; }
-.phrase .phrase-image {
-  height: auto; }
-  .phrase .phrase-image img {
-    width: 100%; }
+.phrase {
+  font-family: herculanum; }
+  .phrase .quote {
+    width: 100%;
+    font-size: 5em;
+    color: #40826D; }
+  .phrase .quote.quote-left {
+    text-align: left; }
+  .phrase .quote.quote-right {
+    text-align: right; }
+  .phrase .phrase-text {
+    height: 100%;
+    margin: auto;
+    font-size: 1.3em; }
+  .phrase .phrase-image {
+    height: auto; }
+    .phrase .phrase-image img {
+      width: 100%; }
 
 /* Animations */
 @keyframes fly-in {
