@@ -21,10 +21,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 768px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-device-width: 768px) {
     .section {
       margin-bottom: 50px; } }
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-device-width: 480px) and (max-width: 768px) {
     .section {
       margin-bottom: 50px;
       max-width: 480px; } }
@@ -39,13 +39,13 @@ body {
   padding-bottom: -10px;
   border-bottom: solid #40826D;
   border-width: 1px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-device-width: 768px) {
     .title .name {
       font-size: 74px;
       height: 80px; } }
   .title .name img {
     width: 18px; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-device-width: 768px) {
       .title .name img {
         width: 32px; } }
 .title .name.left {
@@ -53,7 +53,7 @@ body {
   padding: 0; }
   .title .name.left img {
     margin-right: 10px; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-device-width: 768px) {
       .title .name.left img {
         margin-right: 20px; } }
 .title .and {
@@ -65,7 +65,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 42px;
   text-align: center; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-device-width: 768px) {
     .title .and {
       top: 50px;
       font-size: 90px;
@@ -76,7 +76,7 @@ body {
   padding: 0; }
   .title .name.right img {
     margin-left: 10px; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-device-width: 768px) {
       .title .name.right img {
         margin-left: 20px; } }
 
@@ -84,7 +84,7 @@ body {
   height: 350px;
   width: 100%;
   background-image: url("../img/Presenza1440.jpg"); }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-device-width: 768px) {
     .photo-cover {
       height: 650px; } }
 
