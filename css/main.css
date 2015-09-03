@@ -158,14 +158,10 @@ body {
   .phrase .phrase-image {
     padding: 0; }
     .phrase .phrase-image img {
-      margin-left: 0;
       width: 100%; }
-      @media screen and (min-width: 480px) and (max-width: 768px) {
-        .phrase .phrase-image img {
-          margin-left: 1em; } }
       @media screen and (min-width: 769px) {
         .phrase .phrase-image img {
-          margin-left: 2em; } }
+          padding: 20px; } }
 
 /* Animations */
 @keyframes fly-in {
