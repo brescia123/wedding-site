@@ -15,9 +15,11 @@
   font-family: times;
   src: url("../fonts/Times.ttf");
 }
-$medium-bp: 768px;
-$desktop: "screen and (min-width: 768px)";
+$medium-bp: 80%;
+$desktop: "screen and (min-width: 769px)";
 $tablet: "screen and (min-width: 480px) and (max-width: 768px)";
+$phone: "screen and (max-width: 479px)";
+$section-spacing: 30px;
 
 body {
   font-family: savoye;
@@ -39,30 +41,43 @@ body {
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width: $medium-bp;
-
-  @media #{$desktop} {
-    margin-bottom: 50px;
-  }
 
   @media #{$tablet} {
-    margin-bottom: 50px;
-    max-width: 480px;
+    margin-bottom: $section-spacing;
+    max-width: 95%;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: $section-spacing;
+    max-width: $medium-bp;
   }
 }
 
 .section.section-full {
   max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .title {
+  @media #{$tablet} {
+    margin-bottom: 40px;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: 50px;
+  }
+
   .name {
     display: inline-block;
     height: 52px;
     font-size: 46px;
     padding-bottom: -10px;
+
+    @media #{$tablet} {
+      font-size: 63px;
+      height: 63px;
+    }
 
     @media #{$desktop} {
       font-size: 74px;
@@ -73,6 +88,10 @@ body {
 
     img {
       width: 18px;
+
+      @media #{$tablet} {
+        width: 25px;
+      }
 
       @media #{$desktop} {
         width: 32px;
@@ -86,6 +105,10 @@ body {
 
     img {
       margin-right: 10px;
+
+      @media #{$tablet} {
+        margin-right: 15px;
+      }
 
       @media #{$desktop} {
         margin-right: 20px;
@@ -103,6 +126,13 @@ body {
     font-size: 42px;
     text-align: center;
 
+    @media #{$tablet} {
+      top: 36px;
+      font-size: 66px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
     @media #{$desktop} {
       top: 50px;
       font-size: 90px;
@@ -117,6 +147,10 @@ body {
 
     img {
       margin-left: 10px;
+
+      @media #{$tablet} {
+        margin-left: 15px;
+      }
 
       @media #{$desktop} {
         margin-left: 20px;
@@ -133,34 +167,62 @@ body {
   }
   width: 100%;
   background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/Presenza1440.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include background-size(cover);
 }
 
 .phrase {
   font-family: herculanum;
+  padding: 0;
 
-  .quote {
-    width: 100%;
-    font-size: 5em;
-    color: $base-color;
-  }
-  .quote.quote-left {
-    text-align: left;
-  }
-
-  .quote.quote-right {
-    text-align: right;
+  @media #{$phone} {
+    max-width: 90%;
   }
 
   .phrase-text {
     height: 100%;
-    margin: auto;
-    font-size: 1.3em;
+    vertical-align: middle;
+    margin-bottom: $section-spacing;
+    font-size: 0.9em;
+
+    @media #{$tablet} {
+      margin-bottom: $section-spacing;
+      font-size: 1em;
+    }
+
+    @media #{$desktop} {
+      margin-bottom: 0;
+      font-size: 1.1em;
+    }
+    text-align: center;
+    text-indent: 10px;
+    background-image: url("../img/open_quote.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    p {
+      background-image: url("../img/close_quote.png");
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   .phrase-image {
-    height: auto;
+    padding: 0;
 
     img {
+      margin-left: 0;
+
+      @media #{$tablet} {
+        margin-left: 1em;
+      }
+
+      @media #{$desktop} {
+        margin-left: 2em;
+      }
       width: 100%;
     }
   }
