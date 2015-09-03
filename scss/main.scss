@@ -214,14 +214,8 @@ body {
     padding: 0;
 
     img {
-      margin-left: 0;
-
-      @media #{$tablet} {
-        margin-left: 1em;
-      }
-
       @media #{$desktop} {
-        margin-left: 2em;
+        padding: 20px;
       }
       width: 100%;
     }
