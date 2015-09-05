@@ -127,7 +127,21 @@ body {
 
 .phrase {
   font-family: herculanum;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .phrase div {
+    align-self: center;
+    max-width: 100%; }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      .phrase div {
+        padding: 10px;
+        max-width: 50%; } }
+    @media screen and (min-width: 769px) {
+      .phrase div {
+        padding: 10px;
+        max-width: 50%; } }
   @media screen and (max-width: 479px) {
     .phrase {
       max-width: 90%; } }
@@ -155,13 +169,20 @@ body {
       background-repeat: no-repeat;
       padding-top: 30px;
       padding-bottom: 30px; }
+      .phrase .phrase-text p span {
+        width: 100%;
+        font-size: 0.65em;
+        text-align: right; }
   .phrase .phrase-image {
-    padding: 0; }
+    padding-left: 0; }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      .phrase .phrase-image {
+        padding-left: 40px; } }
+    @media screen and (min-width: 769px) {
+      .phrase .phrase-image {
+        padding-left: 40px; } }
     .phrase .phrase-image img {
       width: 100%; }
-      @media screen and (min-width: 769px) {
-        .phrase .phrase-image img {
-          padding: 20px; } }
 
 /* Animations */
 @keyframes fly-in {
