@@ -175,6 +175,24 @@ body {
 .phrase {
   font-family: herculanum;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div {
+    align-self: center;
+    max-width: 100%;
+
+    @media #{$tablet} {
+      padding: 10px;
+      max-width: 50%;
+    }
+
+    @media #{$desktop} {
+      padding: 10px;
+      max-width: 50%;
+    }
+  }
 
   @media #{$phone} {
     max-width: 90%;
@@ -207,16 +225,27 @@ body {
       background-repeat: no-repeat;
       padding-top: 30px;
       padding-bottom: 30px;
+
+      span {
+        width: 100%;
+        font-size: 0.65em;
+        text-align: right;
+      }
     }
   }
 
   .phrase-image {
-    padding: 0;
+    padding-left: 0;
+
+    @media #{$tablet} {
+      padding-left: 40px;
+    }
+
+    @media #{$desktop} {
+      padding-left: 40px;
+    }
 
     img {
-      @media #{$desktop} {
-        padding: 20px;
-      }
       width: 100%;
     }
   }
