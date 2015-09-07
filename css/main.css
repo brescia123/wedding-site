@@ -37,6 +37,26 @@ body {
   padding-left: 0;
   padding-right: 0; }
 
+.section-divided {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .section-divided div {
+    flex-grow: 1;
+    align-self: center;
+    max-width: 100%; }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      .section-divided div {
+        padding: 10px;
+        max-width: 50%; } }
+    @media screen and (min-width: 769px) {
+      .section-divided div {
+        padding: 10px;
+        max-width: 50%; } }
+
+.green-text {
+  color: #40826D; }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .title {
     margin-bottom: 40px; } }
@@ -109,6 +129,21 @@ body {
     @media screen and (min-width: 769px) {
       .title .name.right img {
         margin-left: 20px; } }
+.title .date {
+  position: relative;
+  top: 22px;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.2em; }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .title .date {
+      top: 36px;
+      font-size: 1.2em; } }
+  @media screen and (min-width: 769px) {
+    .title .date {
+      top: 50px;
+      font-size: 1.3em; } }
 
 .photo-cover {
   height: 350px;
@@ -127,21 +162,7 @@ body {
 
 .phrase {
   font-family: herculanum;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  .phrase div {
-    align-self: center;
-    max-width: 100%; }
-    @media screen and (min-width: 480px) and (max-width: 768px) {
-      .phrase div {
-        padding: 10px;
-        max-width: 50%; } }
-    @media screen and (min-width: 769px) {
-      .phrase div {
-        padding: 10px;
-        max-width: 50%; } }
+  padding: 0; }
   @media screen and (max-width: 479px) {
     .phrase {
       max-width: 90%; } }
@@ -163,16 +184,18 @@ body {
       .phrase .phrase-text {
         margin-bottom: 0;
         font-size: 1.1em; } }
-    .phrase .phrase-text p {
+    .phrase .phrase-text p#phrase {
+      padding-top: 30px;
+      margin-bottom: 0;
+      text-align: center; }
+    .phrase .phrase-text p#cite {
       background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/close_quote.png");
       background-position: bottom right;
       background-repeat: no-repeat;
-      padding-top: 30px;
-      padding-bottom: 30px; }
-      .phrase .phrase-text p span {
-        width: 100%;
-        font-size: 0.65em;
-        text-align: right; }
+      padding-bottom: 30px;
+      width: 100%;
+      font-size: 0.65em;
+      text-align: right; }
   .phrase .phrase-image {
     padding-left: 0; }
     @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -183,6 +206,47 @@ body {
         padding-left: 40px; } }
     .phrase .phrase-image img {
       width: 100%; }
+
+.ceremony .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .ceremony .title {
+      font-size: 2em;
+      margin-left: 1em;
+      margin-right: 1em; } }
+  @media screen and (min-width: 769px) {
+    .ceremony .title {
+      font-size: 2.5em; } }
+  .ceremony .title p {
+    margin-left: 25px;
+    margin-right: 25px; }
+.ceremony .ceremony-content .ceremony-text {
+  height: 100%;
+  text-align: center;
+  font-size: 1.2em; }
+  .ceremony .ceremony-content .ceremony-text img {
+    width: 35%;
+    margin-bottom: 10px; }
+.ceremony .ceremony-content .ceremony-map {
+  background: red; }
+  @media screen and (max-width: 479px) {
+    .ceremony .ceremony-content .ceremony-map {
+      display: none;
+      padding-left: 40px; } }
+
+.line {
+  background: #40826D no-repeat scroll center;
+  width: 100%;
+  height: 2px;
+  position: relative;
+  bottom: 0.2em; }
 
 /* Animations */
 @keyframes fly-in {
