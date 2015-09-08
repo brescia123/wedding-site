@@ -1,3 +1,5 @@
+@import "compass/reset";
+@import "compass/css3/flexbox";
 @import "mixins";
 @import "colors";
 
@@ -60,11 +62,13 @@ body {
 }
 
 .section-divided {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include align-items(stretch);
 
-  div {
+  >div {
     flex-grow: 1;
     align-self: center;
     max-width: 100%;
@@ -199,7 +203,6 @@ body {
       font-size: 1.3em;
     }
     text-align: center;
-    margin-bottom: 0;
     font-size: 1.2em;
   }
 }
@@ -282,11 +285,11 @@ body {
 
 .ceremony {
   .title {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    justify-content: center;
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(baseline);
+    @include justify-content(center);
     font-size: 1.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -309,21 +312,54 @@ body {
 
   .ceremony-content {
     .ceremony-text {
-      height: 100%;
       text-align: center;
       font-size: 1.2em;
+
       img {
         width: 35%;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      #ceremony-date {
+        margin-bottom: 30px;
       }
     }
 
     .ceremony-map {
+      height: auto;
+      width: 100%;
+      height: 400px;
+
       @media #{$phone} {
-        display: none;
-        padding-left: 40px;
+        height: auto;
       }
-      background: red;
+
+      .map {
+        max-width: 100%;
+        display: block;
+        height: 100%;
+
+        @media #{$phone} {
+          display: none;
+          padding-left: 40px;
+        }
+      }
+
+      .map-button {
+        display: none;
+        width: 15%;
+        margin: auto;
+
+        @media #{$phone} {
+          display: block;
+        }
+
+        img {
+          margin-top: 1em;
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -334,7 +370,105 @@ body {
   height: 2px;
   position: relative;
   bottom: 0.2em;
+}
 
+.gift {
+  height: 350px;
+  position: relative;
+
+  @media #{$desktop} {
+    height: 650px;
+  }
+  width: 100%;
+  background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/Regalo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include background-size(cover);
+
+  .green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $base-color-4;
+    opacity: 0.6;
+  }
+
+  .gift-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    @media #{$tablet} {
+      padding: 20px;
+    }
+
+    @media #{$desktop} {
+      padding: 30px;
+    }
+
+    .gift-title {
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    .gift-text {
+      margin: auto;
+      vertical-align: middle;
+      line-height: 1.2em;
+      color: white;
+      text-align: center;
+      font-size: 1.2em;
+
+      @media #{$tablet} {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        padding: 20px;
+      }
+
+      @media #{$desktop} {
+        max-width: 70%;
+        line-height: 1.8em;
+        font-size: 1.5em;
+        padding: 30px;
+      }
+    }
+
+    .gift-button {
+      -webkit-border-radius: 3;
+      -moz-border-radius: 3;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 1.8em;
+      background: #e43454;
+      padding: 12px 15px 6px 15px;
+
+      @media #{$tablet} {
+        padding: 16px 20px 8px 20px;
+      }
+
+      @media #{$desktop} {
+        padding: 20px 25px 10px 25px;
+      }
+      text-decoration: none;
+      width: 150px;
+      margin: auto;
+    }
+
+    .gift-button:hover {
+      cursor: pointer;
+      background: #a82840;
+      text-decoration: none;
+    }
+  }
 }
 
 /* Animations */
