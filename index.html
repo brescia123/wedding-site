@@ -45,7 +45,7 @@
     <div class="photo-cover section section-full">
 
     </div>
-    <div class="phrase section section-divided">
+    <div class="phrase section section-divided center-block">
       <div class="phrase-text sub-section">
         <p id="phrase">
           Ho fatto conoscere loro il tuo nome e lo farò conoscere, perché l'amore con il quale mi hai amato sia in essi e io in loro.
@@ -59,7 +59,9 @@
     </div>
     <div class="ceremony section">
       <div class="title">
-        <h2 class="lines double"><span>Cerimonia</span></h2>
+        <h2 class="lines double">
+          <span>Cerimonia</span>
+        </h2>
       </div>
       <div class="ceremony-content section-divided">
         <div class="ceremony-text sub-section">
@@ -92,11 +94,28 @@
           REGALO
         </p>
         <p class="gift-text">
-          Cari amici, non abbiamo una lista nozze perché, avendo preso come inizio una casa in affitto già arredata, ci mancano veramente poche cose: un barile da salsa tonnata, uno sgabello per Giulio, un set di piatti da litigio... Se volete partecipare al regalo,
-          potete aiutarci con un contributo per il viaggio di nozze e per completare l'arredo!
-        </p>
-        <div class="gift-button">
+          Cari parenti e amici, non abbiamo una lista nozze perché per l'inizio abbiamo preso una casa in affitto già arredata; ci mancano veramente poche cose: un barile da salsa tonnata, uno sgabello per Giulio, un set di piatti da litigio... Se volete partecipare
+          alla nostra gioia, potete aiutarci con un contributo per l'arredo e per il viaggio di nozze! </p>
+        <div type="button" id="gift-button" data-toggle="modal" data-target="#gift-modal">
           Grazie!
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="gift-modal" tabindex="-1" role="dialog" aria-labelledby="giftModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Bonifico bancario al conto corrente intestato a Giulio Bresciani IT 66 E 08386 32550 000000307542 specificando nella causale il nome di chi contribuisce al regalo.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -107,6 +126,8 @@
   </div>
   <!-- /container -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script src="bower_components/bootstrap/js/modal.js"></script>
 
   <script src="js/main.js"></script>
 
