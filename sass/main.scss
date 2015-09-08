@@ -62,25 +62,38 @@ body {
 }
 
 .section-divided {
-  @include display-flex;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include justify-content(center);
-  @include align-items(stretch);
+  width:100%;
+  display: block;
+  padding:10px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+
+  @media #{$tablet} {
+    padding: 10px;
+    display: table;
+  }
+
+  @media #{$desktop} {
+    padding: 10px;
+    display: table;
+  }
+
 
   >div {
-    flex-grow: 1;
-    align-self: center;
-    max-width: 100%;
-
+    display:block;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    vertical-align: middle;
     @media #{$tablet} {
+      display: table-cell;
       padding: 10px;
-      max-width: 50%;
     }
 
     @media #{$desktop} {
+      display: table-cell;
       padding: 10px;
-      max-width: 50%;
     }
   }
 }
@@ -232,8 +245,6 @@ body {
   }
 
   .phrase-text {
-    height: 100%;
-    vertical-align: middle;
     margin-bottom: $section-spacing;
     line-height: 1.2em;
     font-size: 0.9em;
@@ -251,11 +262,12 @@ body {
     }
     text-align: center;
     text-indent: 10px;
-    background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/open_quote.png");
-    background-position: top left;
-    background-repeat: no-repeat;
+
 
     p#phrase {
+      background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/open_quote.png");
+      background-position: top left;
+      background-repeat: no-repeat;
       padding-top: 30px;
       margin-bottom: 0;
       text-align: center;
@@ -273,7 +285,11 @@ body {
   }
 
   .phrase-image {
-    padding-left: 0;
+    vertical-align: middle;
+    width:95%;
+    margin:0px auto;
+    display:block;
+    height:auto;
 
     @media #{$tablet} {
       padding-left: 40px;
@@ -409,8 +425,12 @@ body {
 }
 
 .gift {
-  height: 350px;
+  height: 500px;
   position: relative;
+
+  @media #{$tablet} {
+    height: 550px;
+  }
 
   @media #{$desktop} {
     height: 650px;
@@ -457,6 +477,7 @@ body {
     }
 
     .gift-text {
+      overflow: hidden;
       margin: auto;
       vertical-align: middle;
       line-height: 1.2em;
@@ -472,20 +493,21 @@ body {
 
       @media #{$desktop} {
         max-width: 70%;
-        line-height: 1.8em;
+        line-height: 1.5em;
         font-size: 1.5em;
         padding: 30px;
       }
     }
 
-    .gift-button {
+
+    #gift-button {
       -webkit-border-radius: 3;
       -moz-border-radius: 3;
       border-radius: 3px;
       color: #fff;
       font-size: 1.8em;
       background: #e43454;
-      padding: 12px 15px 6px;
+      padding: 20px 15px 6px;
 
       @media #{$tablet} {
         padding: 16px 20px 8px;
@@ -499,10 +521,15 @@ body {
       margin: auto;
     }
 
-    .gift-button:hover {
+    #gift-button:hover {
       cursor: pointer;
       background: #a82840;
       text-decoration: none;
+    }
+
+    #gift-modal {
+      font-family: herculanum;
+      color: black;
     }
   }
 }
