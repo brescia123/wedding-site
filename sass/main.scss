@@ -14,8 +14,13 @@
 }
 
 @font-face {
-  font-family: times;
+  font-family: timesn;
   src: url("../fonts/Times.ttf");
+}
+
+@font-face {
+  font-family: american;
+  src: url("../fonts/AmericanTypewriter.ttf");
 }
 $medium-bp: 80%;
 $desktop: "screen and (min-width: 769px)";
@@ -25,8 +30,6 @@ $section-spacing: 30px;
 
 body {
   font-family: savoye;
-
-  // background-color: $bg-color;
   font-size: 24px;
 }
 
@@ -40,17 +43,17 @@ body {
 }
 
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 
   @media #{$tablet} {
-    margin-bottom: $section-spacing;
+    margin-bottom: 30px;
     max-width: 95%;
   }
 
   @media #{$desktop} {
-    margin-bottom: $section-spacing;
+    margin-bottom: 80px;
     max-width: $medium-bp;
   }
 }
@@ -62,12 +65,12 @@ body {
 }
 
 .section-divided {
-  width:100%;
+  width: 100%;
   display: block;
-  padding:10px;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 
   @media #{$tablet} {
     padding: 10px;
@@ -79,13 +82,13 @@ body {
     display: table;
   }
 
-
   >div {
-    display:block;
+    display: block;
     width: 50%;
     height: 100%;
     margin: auto;
     vertical-align: middle;
+
     @media #{$tablet} {
       display: table-cell;
       padding: 10px;
@@ -168,7 +171,7 @@ body {
     top: 22px;
     margin-left: 10px;
     margin-right: 10px;
-    font-family: times;
+    font-family: timesn;
     font-size: 42px;
     text-align: center;
 
@@ -263,7 +266,6 @@ body {
     text-align: center;
     text-indent: 10px;
 
-
     p#phrase {
       background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/open_quote.png");
       background-position: top left;
@@ -286,10 +288,10 @@ body {
 
   .phrase-image {
     vertical-align: middle;
-    width:95%;
-    margin:0px auto;
-    display:block;
-    height:auto;
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
 
     @media #{$tablet} {
       padding-left: 40px;
@@ -305,75 +307,91 @@ body {
   }
 }
 
-.ceremony {
-  .title {
-    font-size: 1.5em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+.section-title {
+  font-size: 1.8em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 
-    @media #{$tablet} {
-      font-size: 2em;
-      margin-left: 1em;
-      margin-right: 1em;
-    }
+  @media #{$tablet} {
+    font-size: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
-    @media #{$desktop} {
-      font-size: 2.5em;
-    }
+  @media #{$desktop} {
+    font-size: 2.5em;
+  }
 
-    h2 {
-      text-align: center;
-    }
+  h2 {
+    text-align: center;
+  }
 
-    h2.lines {
-      position: relative;
-      z-index: 1;
+  h2.lines {
+    position: relative;
+    z-index: 1;
 
-      &:before {
-        border-top: 2px solid $base-color;
-        content: "";
-        margin: 0 auto;
-        /* this centers the line to the full width specified */
-        position: absolute;
-        /* positioning must be absolute here, and relative positioning must be applied to the parent */
-        top: 50%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 95%;
-        z-index: -1;
-      }
-
-      span {
-        /* to hide the lines from behind the text, you have to set the background color the same as the container */
-        background: #fff;
-        padding: 0 30px;
-      }
-    }
-
-    h2.double:before {
-      /* this is just to undo the :before styling from above */
-      border-top: none;
-    }
-
-    h2.double:after {
-      border-bottom: 2px solid $base-color;
+    &:before {
+      border-top: 2px solid $base-color;
       content: "";
       margin: 0 auto;
       /* this centers the line to the full width specified */
       position: absolute;
-      top: 35%;
+      /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      top: 50%;
       left: 0;
       right: 0;
+      bottom: 0;
       width: 95%;
       z-index: -1;
     }
+
+    span {
+      /* to hide the lines from behind the text, you have to set the background color the same as the container */
+      background: #fff;
+      padding: 0 20px;
+
+      @media #{$tablet} {
+        padding: 0 30px;
+      }
+
+      @media #{$desktop} {
+        padding: 0 40px;
+      }
+    }
   }
 
+  h2.double:before {
+    /* this is just to undo the :before styling from above */
+    border-top: none;
+  }
+
+  h2.double:after {
+    border-bottom: 2px solid $base-color;
+    content: "";
+    margin: 0 auto;
+    /* this centers the line to the full width specified */
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    width: 95%;
+    z-index: -1;
+  }
+}
+
+.ceremony {
   .ceremony-content {
     .ceremony-text {
       text-align: center;
       font-size: 1.2em;
+
+      @media #{$tablet} {
+        font-size: 1.4em;
+      }
+
+      @media #{$desktop} {
+        font-size: 1.6em;
+      }
 
       img {
         width: 35%;
@@ -499,7 +517,6 @@ body {
       }
     }
 
-
     #gift-button {
       -webkit-border-radius: 3;
       -moz-border-radius: 3;
@@ -528,9 +545,96 @@ body {
     }
 
     #gift-modal {
-      font-family: herculanum;
       color: black;
+      font-family: savoye;
+
+      .modal-text {
+        font-size: 1.2em;
+
+        @media #{$desktop} {
+          font-size: 1.6em;
+          padding: 40px;
+        }
+
+        p {
+          margin: 10px;
+
+          @media #{$desktop} {
+            margin: 30px;
+          }
+
+          span {
+            margin-left: 10px;
+          }
+        }
+
+        #iban {
+          font-size: 1rem;
+          font-family: american;
+          margin: 10px;
+
+          @media #{$desktop} {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .close {
+        font-size: 50px;
+      }
     }
+  }
+}
+
+.mail {
+
+  .mail-text {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-top: 30px;
+
+    @media #{$tablet} {
+      font-size: 1.4em;
+    }
+
+    @media #{$desktop} {
+      font-size: 1.5em;
+    }
+
+    .address {
+      font-family: american;
+      color: $base-color-2;
+      font-size: 0.7em;
+      margin-bottom: 50px;
+
+      @media #{$tablet} {
+        font-size: 0.9em;
+        margin-bottom: 100px;
+      }
+
+      @media #{$desktop} {
+        font-size: 1.1em;
+        margin-bottom: 150px;
+      }
+    }
+
+    a:link {
+      color: inherit;
+    }
+  }
+}
+
+footer {
+  background-color: #ebebeb;
+  height: 60%;
+  padding: 1.4em;
+  font-size: 0.5em;
+  font-weight: bold;
+  color: #797979;
+  font-family: "Courier New", Courier, monospace;
+
+  .footer-text {
+    text-align: left;
   }
 }
 

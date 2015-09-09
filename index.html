@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <style>
     body {
@@ -58,14 +60,14 @@
       </div>
     </div>
     <div class="ceremony section">
-      <div class="title">
+      <div class="section-title">
         <h2 class="lines double">
           <span>Cerimonia</span>
         </h2>
       </div>
       <div class="ceremony-content section-divided">
         <div class="ceremony-text sub-section">
-          <img src="img/rings.png" id="rings" />
+          <img src="https://s3.eu-central-1.amazonaws.com/j-wedding-site/rings.png" id="rings" />
           <p id="ceremony-date">
             Sabato
             <span class="green-text">10 ottobre</span>,
@@ -103,25 +105,57 @@
         <div class="modal fade" id="gift-modal" tabindex="-1" role="dialog" aria-labelledby="giftModal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-              </div>
-              <div class="modal-body">
-                <p>
-                  Bonifico bancario al conto corrente intestato a Giulio Bresciani IT 66 E 08386 32550 000000307542 specificando nella causale il nome di chi contribuisce al regalo.
-                </p>
+                <div class="modal-text">
+                  <p>
+                    Puoi versare l'importo direttamente qui
+                  </p>
+                  <p id="iban">
+                    IBAN:
+                    <span>IT 66 E 08386 32550 000000307542</span>
+                  </p>
+                  <p>
+                    Beneficiario: Giulio Bresciani
+                  </p>
+                  <p>
+                    Causale: nome di chi contribuisce al regalo
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="mail section">
+      <div class="section-title">
+        <h2 class="lines double">
+          <span>
+            <img src="img/mail.png" alt="" />
+          </span>
+        </h2>
+      </div>
+      <div class="mail-text">
+        <p>
+          Per confermare la vostra presenza,
+          <br>scriveteci!
+        </p>
+        <p class="address">
+          <a href="mailto:giuliobresciani@gmail.com?Subject=Matrimonio%20Giulio%20Marta" target="_top">giuliobresciani@gmail.com</a>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-text">
+        <span> <i class="fa fa-code fa-2x"></i> Created by a proud brother</span>
+      </div>
+    </div>
   </footer>
   </div>
   <!-- /container -->
