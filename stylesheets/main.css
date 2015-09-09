@@ -779,14 +779,14 @@ body {
 @media screen and (min-width: 480px) and (max-width: 768px) {
   /* line 609, ../sass/main.scss */
   .mail .mail-text .address {
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 100px;
   }
 }
 @media screen and (min-width: 769px) {
   /* line 609, ../sass/main.scss */
   .mail .mail-text .address {
-    font-size: 1.1em;
+    font-size: 0.9em;
     margin-bottom: 150px;
   }
 }
