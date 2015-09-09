@@ -613,12 +613,12 @@ body {
       margin-bottom: 50px;
       text-decoration: underline;
       @media #{$tablet} {
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: 100px;
       }
 
       @media #{$desktop} {
-        font-size: 1.1em;
+        font-size: 0.9em;
         margin-bottom: 150px;
       }
     }
