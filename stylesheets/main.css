@@ -72,16 +72,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url("../fonts/Herculanum.ttf");
 }
 @font-face {
-  font-family: times;
+  font-family: timesn;
   src: url("../fonts/Times.ttf");
 }
-/* line 26, ../sass/main.scss */
+@font-face {
+  font-family: american;
+  src: url("../fonts/AmericanTypewriter.ttf");
+}
+/* line 31, ../sass/main.scss */
 body {
   font-family: savoye;
   font-size: 24px;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 .container {
   text-align: center;
   margin-left: 0;
@@ -91,35 +95,35 @@ body {
   width: 100%;
 }
 
-/* line 42, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 42, ../sass/main.scss */
+  /* line 45, ../sass/main.scss */
   .section {
     margin-bottom: 30px;
     max-width: 95%;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 42, ../sass/main.scss */
+  /* line 45, ../sass/main.scss */
   .section {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     max-width: 80%;
   }
 }
 
-/* line 58, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .section.section-full {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 .section-divided {
   width: 100%;
   display: block;
@@ -129,20 +133,20 @@ body {
   -webkit-box-sizing: border-box;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 64, ../sass/main.scss */
+  /* line 67, ../sass/main.scss */
   .section-divided {
     padding: 10px;
     display: table;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 64, ../sass/main.scss */
+  /* line 67, ../sass/main.scss */
   .section-divided {
     padding: 10px;
     display: table;
   }
 }
-/* line 83, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 .section-divided > div {
   display: block;
   width: 50%;
@@ -151,44 +155,44 @@ body {
   vertical-align: middle;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 83, ../sass/main.scss */
+  /* line 85, ../sass/main.scss */
   .section-divided > div {
     display: table-cell;
     padding: 10px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 83, ../sass/main.scss */
+  /* line 85, ../sass/main.scss */
   .section-divided > div {
     display: table-cell;
     padding: 10px;
   }
 }
 
-/* line 101, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .green-text {
   color: #40826D;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 .title {
   margin-top: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 105, ../sass/main.scss */
+  /* line 108, ../sass/main.scss */
   .title {
     margin-top: 5px;
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 105, ../sass/main.scss */
+  /* line 108, ../sass/main.scss */
   .title {
     margin-top: 0;
     margin-bottom: 50px;
   }
 }
-/* line 118, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .title .name {
   display: inline-block;
   height: 52px;
@@ -197,69 +201,69 @@ body {
   border-width: 1px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 118, ../sass/main.scss */
+  /* line 121, ../sass/main.scss */
   .title .name {
     font-size: 63px;
     height: 63px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 118, ../sass/main.scss */
+  /* line 121, ../sass/main.scss */
   .title .name {
     font-size: 74px;
     height: 80px;
   }
 }
-/* line 135, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .title .name img {
   width: 18px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 135, ../sass/main.scss */
+  /* line 138, ../sass/main.scss */
   .title .name img {
     width: 25px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 135, ../sass/main.scss */
+  /* line 138, ../sass/main.scss */
   .title .name img {
     width: 32px;
   }
 }
-/* line 148, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .title .name.left {
   text-align: right;
   padding: 0;
 }
-/* line 152, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .title .name.left img {
   margin-right: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 152, ../sass/main.scss */
+  /* line 155, ../sass/main.scss */
   .title .name.left img {
     margin-right: 15px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 152, ../sass/main.scss */
+  /* line 155, ../sass/main.scss */
   .title .name.left img {
     margin-right: 20px;
   }
 }
-/* line 165, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .title .and {
   display: inline-block;
   position: relative;
   top: 22px;
   margin-left: 10px;
   margin-right: 10px;
-  font-family: times;
+  font-family: timesn;
   font-size: 42px;
   text-align: center;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 165, ../sass/main.scss */
+  /* line 168, ../sass/main.scss */
   .title .and {
     top: 36px;
     font-size: 66px;
@@ -268,7 +272,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 165, ../sass/main.scss */
+  /* line 168, ../sass/main.scss */
   .title .and {
     top: 50px;
     font-size: 90px;
@@ -276,28 +280,28 @@ body {
     margin-right: 20px;
   }
 }
-/* line 190, ../sass/main.scss */
+/* line 193, ../sass/main.scss */
 .title .name.right {
   text-align: left;
   padding: 0;
 }
-/* line 194, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 .title .name.right img {
   margin-left: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 194, ../sass/main.scss */
+  /* line 197, ../sass/main.scss */
   .title .name.right img {
     margin-left: 15px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 194, ../sass/main.scss */
+  /* line 197, ../sass/main.scss */
   .title .name.right img {
     margin-left: 20px;
   }
 }
-/* line 207, ../sass/main.scss */
+/* line 210, ../sass/main.scss */
 .title .date {
   position: relative;
   top: 22px;
@@ -306,21 +310,21 @@ body {
   font-size: 1.2em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 207, ../sass/main.scss */
+  /* line 210, ../sass/main.scss */
   .title .date {
     top: 36px;
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 207, ../sass/main.scss */
+  /* line 210, ../sass/main.scss */
   .title .date {
     top: 50px;
     font-size: 1.6em;
   }
 }
 
-/* line 226, ../sass/main.scss */
+/* line 229, ../sass/main.scss */
 .photo-cover {
   height: 350px;
   width: 100%;
@@ -334,24 +338,24 @@ body {
   background-size: cover;
 }
 @media screen and (min-width: 769px) {
-  /* line 226, ../sass/main.scss */
+  /* line 229, ../sass/main.scss */
   .photo-cover {
     height: 650px;
   }
 }
 
-/* line 239, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 .phrase {
   font-family: herculanum;
   padding: 0;
 }
 @media screen and (max-width: 479px) {
-  /* line 239, ../sass/main.scss */
+  /* line 242, ../sass/main.scss */
   .phrase {
     max-width: 90%;
   }
 }
-/* line 247, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 .phrase .phrase-text {
   margin-bottom: 30px;
   line-height: 1.2em;
@@ -360,7 +364,7 @@ body {
   text-indent: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 247, ../sass/main.scss */
+  /* line 250, ../sass/main.scss */
   .phrase .phrase-text {
     margin-bottom: 30px;
     line-height: 1.7em;
@@ -368,14 +372,14 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 247, ../sass/main.scss */
+  /* line 250, ../sass/main.scss */
   .phrase .phrase-text {
     margin-bottom: 0;
     line-height: 2em;
     font-size: 1.1em;
   }
 }
-/* line 267, ../sass/main.scss */
+/* line 269, ../sass/main.scss */
 .phrase .phrase-text p#phrase {
   background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/open_quote.png");
   background-position: top left;
@@ -384,7 +388,7 @@ body {
   margin-bottom: 0;
   text-align: center;
 }
-/* line 276, ../sass/main.scss */
+/* line 278, ../sass/main.scss */
 .phrase .phrase-text p#cite {
   background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/close_quote.png");
   background-position: bottom right;
@@ -394,62 +398,62 @@ body {
   font-size: 0.65em;
   text-align: right;
 }
-/* line 287, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 .phrase .phrase-image {
   vertical-align: middle;
   width: 95%;
-  margin: 0px auto;
+  margin: 0 auto;
   display: block;
   height: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 287, ../sass/main.scss */
+  /* line 289, ../sass/main.scss */
   .phrase .phrase-image {
     padding-left: 40px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 287, ../sass/main.scss */
+  /* line 289, ../sass/main.scss */
   .phrase .phrase-image {
     padding-left: 40px;
   }
 }
-/* line 302, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 .phrase .phrase-image img {
   width: 100%;
 }
 
-/* line 309, ../sass/main.scss */
-.ceremony .title {
-  font-size: 1.5em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+/* line 310, ../sass/main.scss */
+.section-title {
+  font-size: 1.8em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 309, ../sass/main.scss */
-  .ceremony .title {
+  /* line 310, ../sass/main.scss */
+  .section-title {
     font-size: 2em;
     margin-left: 1em;
     margin-right: 1em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 309, ../sass/main.scss */
-  .ceremony .title {
+  /* line 310, ../sass/main.scss */
+  .section-title {
     font-size: 2.5em;
   }
 }
-/* line 324, ../sass/main.scss */
-.ceremony .title h2 {
+/* line 325, ../sass/main.scss */
+.section-title h2 {
   text-align: center;
 }
-/* line 328, ../sass/main.scss */
-.ceremony .title h2.lines {
+/* line 329, ../sass/main.scss */
+.section-title h2.lines {
   position: relative;
   z-index: 1;
 }
-/* line 332, ../sass/main.scss */
-.ceremony .title h2.lines:before {
+/* line 333, ../sass/main.scss */
+.section-title h2.lines:before {
   border-top: 2px solid #40826D;
   content: "";
   margin: 0 auto;
@@ -463,19 +467,31 @@ body {
   width: 95%;
   z-index: -1;
 }
-/* line 347, ../sass/main.scss */
-.ceremony .title h2.lines span {
+/* line 348, ../sass/main.scss */
+.section-title h2.lines span {
   /* to hide the lines from behind the text, you have to set the background color the same as the container */
   background: #fff;
-  padding: 0 30px;
+  padding: 0 20px;
 }
-/* line 354, ../sass/main.scss */
-.ceremony .title h2.double:before {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 348, ../sass/main.scss */
+  .section-title h2.lines span {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 348, ../sass/main.scss */
+  .section-title h2.lines span {
+    padding: 0 40px;
+  }
+}
+/* line 363, ../sass/main.scss */
+.section-title h2.double:before {
   /* this is just to undo the :before styling from above */
   border-top: none;
 }
-/* line 359, ../sass/main.scss */
-.ceremony .title h2.double:after {
+/* line 368, ../sass/main.scss */
+.section-title h2.double:after {
   border-bottom: 2px solid #40826D;
   content: "";
   margin: 0 auto;
@@ -487,65 +503,78 @@ body {
   width: 95%;
   z-index: -1;
 }
-/* line 374, ../sass/main.scss */
+
+/* line 384, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text {
   text-align: center;
   font-size: 1.2em;
 }
-/* line 378, ../sass/main.scss */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 384, ../sass/main.scss */
+  .ceremony .ceremony-content .ceremony-text {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 384, ../sass/main.scss */
+  .ceremony .ceremony-content .ceremony-text {
+    font-size: 1.6em;
+  }
+}
+/* line 396, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text img {
   width: 35%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 384, ../sass/main.scss */
+/* line 402, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text #ceremony-date {
   margin-bottom: 30px;
 }
-/* line 389, ../sass/main.scss */
+/* line 407, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map {
   height: auto;
   width: 100%;
   height: 400px;
 }
 @media screen and (max-width: 479px) {
-  /* line 389, ../sass/main.scss */
+  /* line 407, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map {
     height: auto;
   }
 }
-/* line 398, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map {
   max-width: 100%;
   display: block;
   height: 100%;
 }
 @media screen and (max-width: 479px) {
-  /* line 398, ../sass/main.scss */
+  /* line 416, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map .map {
     display: none;
     padding-left: 40px;
   }
 }
-/* line 409, ../sass/main.scss */
+/* line 427, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map-button {
   display: none;
   width: 15%;
   margin: auto;
 }
 @media screen and (max-width: 479px) {
-  /* line 409, ../sass/main.scss */
+  /* line 427, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map .map-button {
     display: block;
   }
 }
-/* line 418, ../sass/main.scss */
+/* line 436, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map-button img {
   margin-top: 1em;
   width: 100%;
 }
 
-/* line 427, ../sass/main.scss */
+/* line 445, ../sass/main.scss */
 .gift {
   height: 500px;
   position: relative;
@@ -560,18 +589,18 @@ body {
   background-size: cover;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 427, ../sass/main.scss */
+  /* line 445, ../sass/main.scss */
   .gift {
     height: 550px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 427, ../sass/main.scss */
+  /* line 445, ../sass/main.scss */
   .gift {
     height: 650px;
   }
 }
-/* line 444, ../sass/main.scss */
+/* line 462, ../sass/main.scss */
 .gift .green-overlay {
   position: absolute;
   top: 0;
@@ -581,7 +610,7 @@ body {
   background-color: #10503B;
   opacity: 0.6;
 }
-/* line 454, ../sass/main.scss */
+/* line 472, ../sass/main.scss */
 .gift .gift-content {
   position: absolute;
   top: 0;
@@ -592,18 +621,18 @@ body {
   padding: 20px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 454, ../sass/main.scss */
+  /* line 472, ../sass/main.scss */
   .gift .gift-content {
     padding: 20px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 454, ../sass/main.scss */
+  /* line 472, ../sass/main.scss */
   .gift .gift-content {
     padding: 30px;
   }
 }
-/* line 471, ../sass/main.scss */
+/* line 489, ../sass/main.scss */
 .gift .gift-content .gift-title {
   color: white;
   text-align: center;
@@ -611,7 +640,7 @@ body {
   margin-bottom: 0;
   margin-top: 10px;
 }
-/* line 479, ../sass/main.scss */
+/* line 497, ../sass/main.scss */
 .gift .gift-content .gift-text {
   overflow: hidden;
   margin: auto;
@@ -622,7 +651,7 @@ body {
   font-size: 1.2em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 479, ../sass/main.scss */
+  /* line 497, ../sass/main.scss */
   .gift .gift-content .gift-text {
     font-size: 1.3em;
     line-height: 1.3em;
@@ -630,7 +659,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 479, ../sass/main.scss */
+  /* line 497, ../sass/main.scss */
   .gift .gift-content .gift-text {
     max-width: 70%;
     line-height: 1.5em;
@@ -638,7 +667,7 @@ body {
     padding: 30px;
   }
 }
-/* line 503, ../sass/main.scss */
+/* line 520, ../sass/main.scss */
 .gift .gift-content #gift-button {
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
@@ -652,27 +681,127 @@ body {
   margin: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 503, ../sass/main.scss */
+  /* line 520, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 16px 20px 8px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 503, ../sass/main.scss */
+  /* line 520, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 20px 25px 10px;
   }
 }
-/* line 524, ../sass/main.scss */
+/* line 541, ../sass/main.scss */
 .gift .gift-content #gift-button:hover {
   cursor: pointer;
   background: #a82840;
   text-decoration: none;
 }
-/* line 530, ../sass/main.scss */
+/* line 547, ../sass/main.scss */
 .gift .gift-content #gift-modal {
-  font-family: herculanum;
   color: black;
+  font-family: savoye;
+}
+/* line 551, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text {
+  font-size: 1.2em;
+}
+@media screen and (min-width: 769px) {
+  /* line 551, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text {
+    font-size: 1.6em;
+    padding: 40px;
+  }
+}
+/* line 559, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text p {
+  margin: 10px;
+}
+@media screen and (min-width: 769px) {
+  /* line 559, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text p {
+    margin: 30px;
+  }
+}
+/* line 566, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text p span {
+  margin-left: 10px;
+}
+/* line 571, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text #iban {
+  font-size: 1rem;
+  font-family: american;
+  margin: 10px;
+}
+@media screen and (min-width: 769px) {
+  /* line 571, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text #iban {
+    font-size: 1.4rem;
+  }
+}
+/* line 582, ../sass/main.scss */
+.gift .gift-content #gift-modal .close {
+  font-size: 50px;
+}
+
+/* line 591, ../sass/main.scss */
+.mail .mail-text {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-top: 30px;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 591, ../sass/main.scss */
+  .mail .mail-text {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 591, ../sass/main.scss */
+  .mail .mail-text {
+    font-size: 1.5em;
+  }
+}
+/* line 604, ../sass/main.scss */
+.mail .mail-text .address {
+  font-family: american;
+  color: #659D8B;
+  font-size: 0.7em;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 604, ../sass/main.scss */
+  .mail .mail-text .address {
+    font-size: 0.9em;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 604, ../sass/main.scss */
+  .mail .mail-text .address {
+    font-size: 1.1em;
+    margin-bottom: 150px;
+  }
+}
+/* line 621, ../sass/main.scss */
+.mail .mail-text a:link {
+  color: inherit;
+}
+
+/* line 627, ../sass/main.scss */
+footer {
+  background-color: #ebebeb;
+  height: 60%;
+  padding: 1.4em;
+  font-size: 0.5em;
+  font-weight: bold;
+  color: #797979;
+  font-family: "Courier New", Courier, monospace;
+}
+/* line 636, ../sass/main.scss */
+footer .footer-text {
+  text-align: left;
 }
 
 /* Animations */
