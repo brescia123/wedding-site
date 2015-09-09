@@ -84,7 +84,7 @@ body {
 
   >div {
     display: block;
-    width: 50%;
+    width: 100%;
     height: 100%;
     margin: auto;
     vertical-align: middle;
@@ -92,11 +92,13 @@ body {
     @media #{$tablet} {
       display: table-cell;
       padding: 10px;
+      width: 50%;
     }
 
     @media #{$desktop} {
       display: table-cell;
       padding: 10px;
+      width: 50%;
     }
   }
 }
@@ -589,16 +591,16 @@ body {
 .mail {
 
   .mail-text {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.5em;
     margin-top: 30px;
 
     @media #{$tablet} {
-      font-size: 1.4em;
+      font-size: 1.5em;
     }
 
     @media #{$desktop} {
-      font-size: 1.5em;
+      font-size: 1.6em;
     }
 
     .address {
@@ -606,7 +608,7 @@ body {
       color: $base-color-2;
       font-size: 0.7em;
       margin-bottom: 50px;
-
+      text-decoration: underline;
       @media #{$tablet} {
         font-size: 0.9em;
         margin-bottom: 100px;
