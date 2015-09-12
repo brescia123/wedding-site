@@ -592,8 +592,75 @@ body {
   }
 }
 
-.mail {
+.party {
+  .party-content {
+    .party-text {
+      text-align: center;
+      font-size: 1.2em;
 
+      p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      @media #{$tablet} {
+        font-size: 1.4em;
+      }
+
+      @media #{$desktop} {
+        font-size: 1.6em;
+      }
+
+      img {
+        width: 35%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      #party-invite {
+        margin-bottom: 30px;
+      }
+    }
+
+    .party-map {
+      height: auto;
+      width: 100%;
+      height: 400px;
+
+      @media #{$phone} {
+        height: auto;
+      }
+
+      .map-party {
+        max-width: 100%;
+        display: block;
+        height: 100%;
+
+        @media #{$phone} {
+          display: none;
+          padding-left: 40px;
+        }
+      }
+
+      .map-button {
+        display: none;
+        width: 15%;
+        margin: auto;
+
+        @media #{$phone} {
+          display: block;
+        }
+
+        img {
+          margin-top: 1em;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.mail {
   .mail-text {
     font-size: 1.2em;
     line-height: 1.5em;
@@ -612,6 +679,7 @@ body {
       font-size: 0.7em;
       margin-bottom: 50px;
       text-decoration: underline;
+
       @media #{$tablet} {
         font-size: 0.8em;
         margin-bottom: 100px;
