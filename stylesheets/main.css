@@ -197,8 +197,8 @@ body {
 /* line 123, ../sass/main.scss */
 .title .name {
   display: inline-block;
-  height: 52px;
-  font-size: 46px;
+  height: 45px;
+  font-size: 45px;
   border-bottom: solid #40826D;
   border-width: 1px;
 }
@@ -213,7 +213,7 @@ body {
   /* line 123, ../sass/main.scss */
   .title .name {
     font-size: 74px;
-    height: 80px;
+    height: 74px;
   }
 }
 /* line 140, ../sass/main.scss */
@@ -261,7 +261,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   font-family: timesn;
-  font-size: 42px;
+  font-size: 45px;
   text-align: center;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -333,9 +333,9 @@ body {
 .photo-cover {
   height: 350px;
   width: 100%;
-  background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/gm.jpg");
+  background-image: url("../img/gm.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -389,21 +389,23 @@ body {
   background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/open_quote.png");
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: 8%;
   padding-top: 30px;
   margin-bottom: 0;
   text-align: center;
 }
-/* line 283, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 .phrase .phrase-text p#cite {
   background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/close_quote.png");
   background-position: bottom right;
   background-repeat: no-repeat;
+  background-size: 8%;
   padding-bottom: 30px;
   width: 100%;
   font-size: 0.65em;
   text-align: right;
 }
-/* line 294, ../sass/main.scss */
+/* line 296, ../sass/main.scss */
 .phrase .phrase-image {
   vertical-align: middle;
   width: 95%;
@@ -412,23 +414,23 @@ body {
   height: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 294, ../sass/main.scss */
+  /* line 296, ../sass/main.scss */
   .phrase .phrase-image {
     padding-left: 40px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 294, ../sass/main.scss */
+  /* line 296, ../sass/main.scss */
   .phrase .phrase-image {
     padding-left: 40px;
   }
 }
-/* line 309, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 .phrase .phrase-image img {
   width: 100%;
 }
 
-/* line 315, ../sass/main.scss */
+/* line 317, ../sass/main.scss */
 .section-title {
   font-size: 1.8em;
   margin-left: 0.2em;
@@ -436,7 +438,7 @@ body {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 315, ../sass/main.scss */
+  /* line 317, ../sass/main.scss */
   .section-title {
     font-size: 2em;
     margin-left: 1em;
@@ -444,21 +446,21 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 315, ../sass/main.scss */
+  /* line 317, ../sass/main.scss */
   .section-title {
     font-size: 2.5em;
   }
 }
-/* line 331, ../sass/main.scss */
+/* line 333, ../sass/main.scss */
 .section-title h2 {
   text-align: center;
 }
-/* line 335, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 .section-title h2.lines {
   position: relative;
   z-index: 1;
 }
-/* line 339, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .section-title h2.lines:before {
   border-top: 2px solid #40826D;
   content: "";
@@ -473,30 +475,30 @@ body {
   width: 95%;
   z-index: -1;
 }
-/* line 354, ../sass/main.scss */
+/* line 356, ../sass/main.scss */
 .section-title h2.lines span {
   /* to hide the lines from behind the text, you have to set the background color the same as the container */
   background: #fff;
   padding: 0 20px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 354, ../sass/main.scss */
+  /* line 356, ../sass/main.scss */
   .section-title h2.lines span {
     padding: 0 30px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 354, ../sass/main.scss */
+  /* line 356, ../sass/main.scss */
   .section-title h2.lines span {
     padding: 0 40px;
   }
 }
-/* line 369, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 .section-title h2.double:before {
   /* this is just to undo the :before styling from above */
   border-top: none;
 }
-/* line 374, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .section-title h2.double:after {
   border-bottom: 2px solid #40826D;
   content: "";
@@ -511,76 +513,112 @@ body {
 }
 
 /* line 390, ../sass/main.scss */
+.ceremony {
+  max-width: 100%;
+}
+/* line 392, ../sass/main.scss */
+.ceremony .section-title {
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+/* line 397, ../sass/main.scss */
+.ceremony .church-cover {
+  max-width: 100%;
+  height: 320px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-image: url("https://s3.eu-central-1.amazonaws.com/j-wedding-site/Cerimonia.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+@media screen and (min-width: 769px) {
+  /* line 397, ../sass/main.scss */
+  .ceremony .church-cover {
+    height: 500px;
+  }
+}
+/* line 411, ../sass/main.scss */
+.ceremony .ceremony-content {
+  max-width: 80%;
+  margin: auto;
+}
+/* line 415, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text {
   text-align: center;
   font-size: 1.2em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 390, ../sass/main.scss */
+  /* line 415, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-text {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 390, ../sass/main.scss */
+  /* line 415, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-text {
     font-size: 1.6em;
   }
 }
-/* line 402, ../sass/main.scss */
+/* line 427, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text img {
   width: 35%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 408, ../sass/main.scss */
+/* line 433, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-text #ceremony-date {
   margin-bottom: 30px;
 }
-/* line 413, ../sass/main.scss */
+/* line 438, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map {
   height: auto;
   width: 100%;
   height: 400px;
 }
 @media screen and (max-width: 479px) {
-  /* line 413, ../sass/main.scss */
+  /* line 438, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map {
     height: auto;
   }
 }
-/* line 422, ../sass/main.scss */
+/* line 447, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map {
   max-width: 100%;
   display: block;
   height: 100%;
 }
 @media screen and (max-width: 479px) {
-  /* line 422, ../sass/main.scss */
+  /* line 447, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map .map {
     display: none;
     padding-left: 40px;
   }
 }
-/* line 433, ../sass/main.scss */
+/* line 458, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map-button {
   display: none;
   width: 15%;
   margin: auto;
 }
 @media screen and (max-width: 479px) {
-  /* line 433, ../sass/main.scss */
+  /* line 458, ../sass/main.scss */
   .ceremony .ceremony-content .ceremony-map .map-button {
     display: block;
   }
 }
-/* line 442, ../sass/main.scss */
+/* line 467, ../sass/main.scss */
 .ceremony .ceremony-content .ceremony-map .map-button img {
   margin-top: 1em;
   width: 100%;
 }
 
-/* line 451, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 .gift {
   height: 500px;
   position: relative;
@@ -595,18 +633,18 @@ body {
   background-size: cover;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 451, ../sass/main.scss */
+  /* line 476, ../sass/main.scss */
   .gift {
     height: 550px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 451, ../sass/main.scss */
+  /* line 476, ../sass/main.scss */
   .gift {
     height: 650px;
   }
 }
-/* line 468, ../sass/main.scss */
+/* line 493, ../sass/main.scss */
 .gift .green-overlay {
   position: absolute;
   top: 0;
@@ -616,7 +654,7 @@ body {
   background-color: #10503B;
   opacity: 0.6;
 }
-/* line 478, ../sass/main.scss */
+/* line 503, ../sass/main.scss */
 .gift .gift-content {
   position: absolute;
   top: 0;
@@ -627,18 +665,18 @@ body {
   padding: 20px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 478, ../sass/main.scss */
+  /* line 503, ../sass/main.scss */
   .gift .gift-content {
     padding: 20px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 478, ../sass/main.scss */
+  /* line 503, ../sass/main.scss */
   .gift .gift-content {
     padding: 30px;
   }
 }
-/* line 495, ../sass/main.scss */
+/* line 520, ../sass/main.scss */
 .gift .gift-content .gift-title {
   color: white;
   text-align: center;
@@ -646,7 +684,7 @@ body {
   margin-bottom: 0;
   margin-top: 10px;
 }
-/* line 503, ../sass/main.scss */
+/* line 528, ../sass/main.scss */
 .gift .gift-content .gift-text {
   overflow: hidden;
   margin: auto;
@@ -657,7 +695,7 @@ body {
   font-size: 1.2em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 503, ../sass/main.scss */
+  /* line 528, ../sass/main.scss */
   .gift .gift-content .gift-text {
     font-size: 1.3em;
     line-height: 1.3em;
@@ -665,7 +703,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 503, ../sass/main.scss */
+  /* line 528, ../sass/main.scss */
   .gift .gift-content .gift-text {
     max-width: 70%;
     line-height: 1.5em;
@@ -673,177 +711,177 @@ body {
     padding: 30px;
   }
 }
-/* line 526, ../sass/main.scss */
+/* line 551, ../sass/main.scss */
 .gift .gift-content #gift-button {
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
   border-radius: 3px;
   color: #fff;
   font-size: 1.8em;
-  background: #e43454;
+  background: #CE272E;
   padding: 20px 15px 6px;
   text-decoration: none;
   width: 150px;
   margin: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 526, ../sass/main.scss */
+  /* line 551, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 16px 20px 8px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 526, ../sass/main.scss */
+  /* line 551, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 20px 25px 10px;
   }
 }
-/* line 547, ../sass/main.scss */
+/* line 572, ../sass/main.scss */
 .gift .gift-content #gift-button:hover {
   cursor: pointer;
   background: #a82840;
   text-decoration: none;
 }
-/* line 553, ../sass/main.scss */
+/* line 578, ../sass/main.scss */
 .gift .gift-content #gift-modal {
   color: black;
   font-family: savoye;
 }
-/* line 557, ../sass/main.scss */
+/* line 582, ../sass/main.scss */
 .gift .gift-content #gift-modal .modal-text {
   font-size: 1.2em;
 }
 @media screen and (min-width: 769px) {
-  /* line 557, ../sass/main.scss */
+  /* line 582, ../sass/main.scss */
   .gift .gift-content #gift-modal .modal-text {
     font-size: 1.6em;
     padding: 40px;
   }
 }
-/* line 565, ../sass/main.scss */
+/* line 590, ../sass/main.scss */
 .gift .gift-content #gift-modal .modal-text p {
   margin: 10px;
 }
 @media screen and (min-width: 769px) {
-  /* line 565, ../sass/main.scss */
+  /* line 590, ../sass/main.scss */
   .gift .gift-content #gift-modal .modal-text p {
     margin: 30px;
   }
 }
-/* line 572, ../sass/main.scss */
+/* line 597, ../sass/main.scss */
 .gift .gift-content #gift-modal .modal-text p span {
   margin-left: 10px;
 }
-/* line 577, ../sass/main.scss */
+/* line 602, ../sass/main.scss */
 .gift .gift-content #gift-modal .modal-text #iban {
   font-size: 1rem;
   font-family: american;
   margin: 10px;
 }
 @media screen and (min-width: 769px) {
-  /* line 577, ../sass/main.scss */
+  /* line 602, ../sass/main.scss */
   .gift .gift-content #gift-modal .modal-text #iban {
     font-size: 1.4rem;
   }
 }
-/* line 588, ../sass/main.scss */
+/* line 613, ../sass/main.scss */
 .gift .gift-content #gift-modal .close {
   font-size: 50px;
 }
 
-/* line 597, ../sass/main.scss */
+/* line 622, ../sass/main.scss */
 .party .party-content .party-text {
   text-align: center;
   font-size: 1.2em;
 }
-/* line 601, ../sass/main.scss */
+/* line 626, ../sass/main.scss */
 .party .party-content .party-text p {
   margin-left: 10px;
   margin-right: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 597, ../sass/main.scss */
+  /* line 622, ../sass/main.scss */
   .party .party-content .party-text {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 597, ../sass/main.scss */
+  /* line 622, ../sass/main.scss */
   .party .party-content .party-text {
     font-size: 1.6em;
   }
 }
-/* line 614, ../sass/main.scss */
+/* line 639, ../sass/main.scss */
 .party .party-content .party-text img {
   width: 35%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 620, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 .party .party-content .party-text #party-invite {
   margin-bottom: 30px;
 }
-/* line 625, ../sass/main.scss */
+/* line 650, ../sass/main.scss */
 .party .party-content .party-map {
   height: auto;
   width: 100%;
   height: 400px;
 }
 @media screen and (max-width: 479px) {
-  /* line 625, ../sass/main.scss */
+  /* line 650, ../sass/main.scss */
   .party .party-content .party-map {
     height: auto;
   }
 }
-/* line 634, ../sass/main.scss */
+/* line 659, ../sass/main.scss */
 .party .party-content .party-map .map-party {
   max-width: 100%;
   display: block;
   height: 100%;
 }
 @media screen and (max-width: 479px) {
-  /* line 634, ../sass/main.scss */
+  /* line 659, ../sass/main.scss */
   .party .party-content .party-map .map-party {
     display: none;
     padding-left: 40px;
   }
 }
-/* line 645, ../sass/main.scss */
+/* line 670, ../sass/main.scss */
 .party .party-content .party-map .map-button {
   display: none;
   width: 15%;
   margin: auto;
 }
 @media screen and (max-width: 479px) {
-  /* line 645, ../sass/main.scss */
+  /* line 670, ../sass/main.scss */
   .party .party-content .party-map .map-button {
     display: block;
   }
 }
-/* line 654, ../sass/main.scss */
+/* line 679, ../sass/main.scss */
 .party .party-content .party-map .map-button img {
   margin-top: 1em;
   width: 100%;
 }
 
-/* line 664, ../sass/main.scss */
+/* line 689, ../sass/main.scss */
 .mail .mail-text {
   font-size: 1.2em;
   line-height: 1.5em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 664, ../sass/main.scss */
+  /* line 689, ../sass/main.scss */
   .mail .mail-text {
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 664, ../sass/main.scss */
+  /* line 689, ../sass/main.scss */
   .mail .mail-text {
     font-size: 1.6em;
   }
 }
-/* line 676, ../sass/main.scss */
+/* line 701, ../sass/main.scss */
 .mail .mail-text .address {
   font-family: american;
   color: #659D8B;
@@ -852,25 +890,25 @@ body {
   text-decoration: underline;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 676, ../sass/main.scss */
+  /* line 701, ../sass/main.scss */
   .mail .mail-text .address {
     font-size: 0.8em;
     margin-bottom: 100px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 676, ../sass/main.scss */
+  /* line 701, ../sass/main.scss */
   .mail .mail-text .address {
     font-size: 0.9em;
     margin-bottom: 150px;
   }
 }
-/* line 694, ../sass/main.scss */
+/* line 719, ../sass/main.scss */
 .mail .mail-text a:link {
   color: inherit;
 }
 
-/* line 700, ../sass/main.scss */
+/* line 725, ../sass/main.scss */
 footer {
   background-color: #ebebeb;
   height: 60%;
@@ -880,7 +918,7 @@ footer {
   color: #797979;
   font-family: "Courier New", Courier, monospace;
 }
-/* line 709, ../sass/main.scss */
+/* line 734, ../sass/main.scss */
 footer .footer-text {
   text-align: left;
 }
