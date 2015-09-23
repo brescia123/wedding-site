@@ -693,11 +693,23 @@ body {
 .gift .gift-content .gift-title {
   color: white;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0;
   margin-top: 10px;
 }
-/* line 540, ../sass/main.scss */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 532, ../sass/main.scss */
+  .gift .gift-content .gift-title {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 532, ../sass/main.scss */
+  .gift .gift-content .gift-title {
+    font-size: 2em;
+  }
+}
+/* line 547, ../sass/main.scss */
 .gift .gift-content .gift-text {
   overflow: hidden;
   margin: auto;
@@ -705,10 +717,10 @@ body {
   line-height: 1.2em;
   color: white;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 540, ../sass/main.scss */
+  /* line 547, ../sass/main.scss */
   .gift .gift-content .gift-text {
     font-size: 1.3em;
     line-height: 1.3em;
@@ -716,7 +728,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 540, ../sass/main.scss */
+  /* line 547, ../sass/main.scss */
   .gift .gift-content .gift-text {
     max-width: 70%;
     line-height: 1.5em;
@@ -724,7 +736,7 @@ body {
     padding: 30px;
   }
 }
-/* line 563, ../sass/main.scss */
+/* line 570, ../sass/main.scss */
 .gift .gift-content #gift-button {
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
@@ -738,163 +750,183 @@ body {
   margin: auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 563, ../sass/main.scss */
+  /* line 570, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 16px 20px 8px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 563, ../sass/main.scss */
+  /* line 570, ../sass/main.scss */
   .gift .gift-content #gift-button {
     padding: 20px 25px 10px;
   }
 }
-/* line 584, ../sass/main.scss */
+/* line 591, ../sass/main.scss */
 .gift .gift-content #gift-button:hover {
   cursor: pointer;
   background: #a82840;
   text-decoration: none;
 }
-/* line 590, ../sass/main.scss */
-.gift .gift-content #gift-modal {
+/* line 597, ../sass/main.scss */
+.gift .gift-content #trip-link {
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+/* line 601, ../sass/main.scss */
+.gift .gift-content #trip-link:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #a82840;
+}
+/* line 608, ../sass/main.scss */
+.gift .gift-content #gift-modal, .gift .gift-content #trip-modal {
   color: black;
   font-family: savoye;
 }
-/* line 594, ../sass/main.scss */
-.gift .gift-content #gift-modal .modal-text {
+/* line 612, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-header, .gift .gift-content #trip-modal .modal-header {
+  border-bottom: 0;
+}
+/* line 616, ../sass/main.scss */
+.gift .gift-content #gift-modal #trip-title, .gift .gift-content #trip-modal #trip-title {
+  font-size: 1.7em;
+}
+/* line 620, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text, .gift .gift-content #trip-modal .modal-text {
   font-size: 1.2em;
 }
 @media screen and (min-width: 769px) {
-  /* line 594, ../sass/main.scss */
-  .gift .gift-content #gift-modal .modal-text {
+  /* line 620, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text, .gift .gift-content #trip-modal .modal-text {
     font-size: 1.6em;
     padding: 40px;
   }
 }
-/* line 602, ../sass/main.scss */
-.gift .gift-content #gift-modal .modal-text p {
+/* line 628, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text p, .gift .gift-content #trip-modal .modal-text p {
   margin: 10px;
 }
 @media screen and (min-width: 769px) {
-  /* line 602, ../sass/main.scss */
-  .gift .gift-content #gift-modal .modal-text p {
+  /* line 628, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text p, .gift .gift-content #trip-modal .modal-text p {
     margin: 30px;
   }
 }
-/* line 609, ../sass/main.scss */
-.gift .gift-content #gift-modal .modal-text p span {
+/* line 635, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text p span, .gift .gift-content #trip-modal .modal-text p span {
   margin-left: 10px;
 }
-/* line 614, ../sass/main.scss */
-.gift .gift-content #gift-modal .modal-text #iban {
+/* line 640, ../sass/main.scss */
+.gift .gift-content #gift-modal .modal-text #iban, .gift .gift-content #trip-modal .modal-text #iban {
   font-size: 1rem;
   font-family: american;
   margin: 10px;
 }
 @media screen and (min-width: 769px) {
-  /* line 614, ../sass/main.scss */
-  .gift .gift-content #gift-modal .modal-text #iban {
+  /* line 640, ../sass/main.scss */
+  .gift .gift-content #gift-modal .modal-text #iban, .gift .gift-content #trip-modal .modal-text #iban {
     font-size: 1.4rem;
   }
 }
-/* line 625, ../sass/main.scss */
-.gift .gift-content #gift-modal .close {
+/* line 651, ../sass/main.scss */
+.gift .gift-content #gift-modal .close, .gift .gift-content #trip-modal .close {
   font-size: 50px;
 }
 
-/* line 634, ../sass/main.scss */
+/* line 660, ../sass/main.scss */
 .party .party-content .party-text {
   text-align: center;
   font-size: 1.2em;
 }
-/* line 638, ../sass/main.scss */
+/* line 664, ../sass/main.scss */
 .party .party-content .party-text p {
   margin-left: 10px;
   margin-right: 10px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 634, ../sass/main.scss */
+  /* line 660, ../sass/main.scss */
   .party .party-content .party-text {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 634, ../sass/main.scss */
+  /* line 660, ../sass/main.scss */
   .party .party-content .party-text {
     font-size: 1.6em;
   }
 }
-/* line 651, ../sass/main.scss */
+/* line 677, ../sass/main.scss */
 .party .party-content .party-text img {
   width: 35%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 657, ../sass/main.scss */
+/* line 683, ../sass/main.scss */
 .party .party-content .party-text #party-invite {
   margin-bottom: 30px;
 }
-/* line 662, ../sass/main.scss */
+/* line 688, ../sass/main.scss */
 .party .party-content .party-map {
   height: auto;
   width: 100%;
   height: 400px;
 }
 @media screen and (max-width: 479px) {
-  /* line 662, ../sass/main.scss */
+  /* line 688, ../sass/main.scss */
   .party .party-content .party-map {
     height: auto;
   }
 }
-/* line 671, ../sass/main.scss */
+/* line 697, ../sass/main.scss */
 .party .party-content .party-map .map-party {
   max-width: 100%;
   display: block;
   height: 100%;
 }
 @media screen and (max-width: 479px) {
-  /* line 671, ../sass/main.scss */
+  /* line 697, ../sass/main.scss */
   .party .party-content .party-map .map-party {
     display: none;
     padding-left: 40px;
   }
 }
-/* line 682, ../sass/main.scss */
+/* line 708, ../sass/main.scss */
 .party .party-content .party-map .map-button {
   display: none;
   width: 15%;
   margin: auto;
 }
 @media screen and (max-width: 479px) {
-  /* line 682, ../sass/main.scss */
+  /* line 708, ../sass/main.scss */
   .party .party-content .party-map .map-button {
     display: block;
   }
 }
-/* line 691, ../sass/main.scss */
+/* line 717, ../sass/main.scss */
 .party .party-content .party-map .map-button img {
   margin-top: 1em;
   width: 100%;
 }
 
-/* line 701, ../sass/main.scss */
+/* line 727, ../sass/main.scss */
 .mail .mail-text {
   font-size: 1.2em;
   line-height: 1.5em;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 701, ../sass/main.scss */
+  /* line 727, ../sass/main.scss */
   .mail .mail-text {
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 701, ../sass/main.scss */
+  /* line 727, ../sass/main.scss */
   .mail .mail-text {
     font-size: 1.6em;
   }
 }
-/* line 713, ../sass/main.scss */
+/* line 739, ../sass/main.scss */
 .mail .mail-text .address {
   font-family: american;
   color: #659D8B;
@@ -903,25 +935,25 @@ body {
   text-decoration: underline;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 713, ../sass/main.scss */
+  /* line 739, ../sass/main.scss */
   .mail .mail-text .address {
     font-size: 0.8em;
     margin-bottom: 100px;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 713, ../sass/main.scss */
+  /* line 739, ../sass/main.scss */
   .mail .mail-text .address {
     font-size: 0.9em;
     margin-bottom: 150px;
   }
 }
-/* line 731, ../sass/main.scss */
+/* line 757, ../sass/main.scss */
 .mail .mail-text a:link {
   color: inherit;
 }
 
-/* line 737, ../sass/main.scss */
+/* line 763, ../sass/main.scss */
 footer {
   background-color: #ebebeb;
   height: 60%;
@@ -931,7 +963,7 @@ footer {
   color: #797979;
   font-family: "Courier New", Courier, monospace;
 }
-/* line 746, ../sass/main.scss */
+/* line 772, ../sass/main.scss */
 footer .footer-text {
   text-align: left;
 }
