@@ -532,9 +532,16 @@ body {
     .gift-title {
       color: white;
       text-align: center;
-      font-size: 2em;
+      font-size: 1.5em;
       margin-bottom: 0;
       margin-top: 10px;
+      @media #{$tablet} {
+        font-size: 1.8em;
+      }
+
+      @media #{$desktop} {
+        font-size: 2em;
+      }
     }
 
     .gift-text {
@@ -544,7 +551,7 @@ body {
       line-height: 1.2em;
       color: white;
       text-align: center;
-      font-size: 1.2em;
+      font-size: 1.1em;
 
       @media #{$tablet} {
         font-size: 1.3em;
@@ -587,9 +594,28 @@ body {
       text-decoration: none;
     }
 
-    #gift-modal {
+    #trip-link{
+      color: #ffffff;
+      font-size: 1.5em;
+      line-height: 2em;
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: #a82840;
+      }
+    }
+
+    #gift-modal, #trip-modal {
       color: black;
       font-family: savoye;
+
+      .modal-header {
+        border-bottom: 0;
+      }
+
+      #trip-title {
+        font-size: 1.7em;
+      }
 
       .modal-text {
         font-size: 1.2em;
