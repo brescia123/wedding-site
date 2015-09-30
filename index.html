@@ -71,7 +71,7 @@
       <div class="ceremony-content">
         <div class="section-divided">
           <div class="ceremony-text sub-section">
-            <img src="https://s3.eu-central-1.amazonaws.com/j-wedding-site/rings.png" />
+            <img id="rings" src="https://s3.eu-central-1.amazonaws.com/j-wedding-site/rings.png" />
             <p id="ceremony-date">
               Sabato
               <span class="green-text">10 ottobre</span>,
@@ -83,6 +83,30 @@
             <p>
               <span class="green-text">Lavagna</span> (Ge)
             </p>
+            <p id="parking-link">
+              <a data-toggle="collapse" href="#parking-content" aria-expanded="false" aria-controls="parking-content">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 65 65" enable-background="new 0 0 100 100" xml:space="preserve">
+                  <g>
+                    <path fill="#000000" d="M39,57c-9.374,0-17-7.626-17-17s7.626-17,17-17s17,7.626,17,17S48.374,57,39,57z M39,25   c-8.271,0-15,6.729-15,15s6.729,15,15,15s15-6.729,15-15S47.271,25,39,25z" />
+                  </g>
+                  <g>
+                    <rect x="35" y="33" fill="#000000" width="2" height="16" />
+                  </g>
+                  <g>
+                    <path fill="#000000" d="M40.931,42H35V32h5.931C43.174,32,45,33.794,45,36v2.135C45,40.302,43.212,42,40.931,42z M37,40h3.931   C42.091,40,43,39.181,43,38.135V36c0-1.084-0.948-2-2.069-2H37V40z" /> </g>
+                </svg>
+                Serve aiuto per il parcheggio?
+              </a>
+            </p>
+            <div class="collapse" id="parking-content">
+              <div id="parking-content">
+                <ul class="well">
+                  <li><a href="https://goo.gl/maps/DozyN68VPt52" target="_blank"><img src="img/simple_marker.png" alt="" />&nbsp &nbsp Via Tommaso Sanguineti, 9</a></li>
+                  <li><a href="https://goo.gl/maps/yp1LBLnQjtN2" target="_blank"><img src="img/simple_marker.png" alt="" />&nbsp &nbsp Via Carcara, 10</a></li>
+                  <li><a href="https://goo.gl/maps/chgJPgiYS7x" target="_blank"><img src="img/simple_marker.png" alt="" />&nbsp &nbsp Via della Pace, 1</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="ceremony-map sub-section">
             <a class="map-button" href="https://www.google.it/maps/place/Basilica+di+S.+Stefano/@44.3098361,9.3475839,17z/data=!4m2!3m1!1s0x0000000000000000:0xb891d6ad5948fb07">
@@ -104,6 +128,20 @@
           Cari parenti e amici, non abbiamo una lista nozze perché per l'inizio abbiamo preso una casa in affitto già arredata; ci mancano veramente poche cose: un barile da salsa tonnata, uno sgabello per Giulio, un set di piatti da litigio... Se volete partecipare
           alla nostra gioia, potete aiutarci con un contributo per l'arredo e per il viaggio di nozze! </p>
         <a id="trip-link" data-toggle="modal" data-target="#trip-modal"><i class="fa fa-map"></i> Le nostre tappe</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-target
+        </button>
+        <div class="collapse" id="collapseExample">
+          <div class="well">
+            ...
+            <p>
+              sdfsg
+            </p>
+            <p>
+              adg
+            </p>
+          </div>
+        </div>
         <div type="button" id="gift-button" data-toggle="modal" data-target="#gift-modal">
           Grazie!
         </div>
@@ -212,6 +250,10 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
   <script src="bower_components/bootstrap/js/modal.js"></script>
+
+  <script src="bower_components/bootstrap/js/transition.js"></script>
+
+  <script src="bower_components/bootstrap/js/collapse.js"></script>
 
   <script src="js/main.js"></script>
 
