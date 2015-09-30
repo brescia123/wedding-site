@@ -82,6 +82,7 @@ var initParkingMap = function() {
       lng: 9.3489485
     },
     info: 'Via Tommaso Sanguineti, 9',
+    link: 'https://goo.gl/maps/DozyN68VPt52',
     label: 'P'
   }, {
     location: {
@@ -89,6 +90,7 @@ var initParkingMap = function() {
       lng: 9.347493
     },
     info: 'Via Carcara, 10',
+    link: 'https://goo.gl/maps/yp1LBLnQjtN2',
     label: 'P'
   }, {
     location: {
@@ -96,6 +98,7 @@ var initParkingMap = function() {
       lng: 9.3486832
     },
     info: 'Via della Pace, 1',
+    link: 'https://goo.gl/maps/chgJPgiYS7x',
     label: 'P'
   }];
 
@@ -112,18 +115,20 @@ var initParkingMap = function() {
     addMarker(parking.location, map, parking.label, parking.icon, parking.info);
   }
 
+  var infowindow = new google.maps.InfoWindow();
+
   function addMarker(location, map, label, icon, info) {
-    var infowindow = new google.maps.InfoWindow({
-      content: '<div><strong>' + info + '</strong><br>'
-    });
+
     var marker = new google.maps.Marker({
       position: location,
       map: map,
       label: label,
-      icon: icon
+      icon: icon,
+      info: info
     });
 
     marker.addListener('click', function() {
+      infowindow.setContent('<div><div style="font-weight:bold; font-size:1.1em;">Parcheggio</div><a href="' + marker.link + '" target="_blank">' + marker.info + '</a>');
       infowindow.open(map, marker);
     });
 
@@ -160,12 +165,15 @@ var initParkingMap = function() {
         location: place.geometry.location
       });
       marker.setVisible(true);
+      marker.link = 'https://goo.gl/maps/bVfVb1bPFwj';
 
-      infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-        place.formatted_address);
-      infowindow.open(map, marker);
+      infowindow.setContent('<div><div style="font-weight:bold; font-size:1.1em;">' + place.name + '</div>' +
+        '<a href="' + marker.link + '" target="_blank">' + place.formatted_address + '</a>');
+      infowindow.open(map, marker) + '</div>';
 
       google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<div><div style="font-weight:bold; font-size:1.1em;">' + place.name + '</div>' +
+          '<a href="' + marker.link + '" target="_blank">' + place.formatted_address + '</a>') + '</div>';
         infowindow.open(map, this);
       });
     }

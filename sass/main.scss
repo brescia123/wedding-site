@@ -436,7 +436,7 @@ body {
         font-size: 1.6em;
       }
 
-      img {
+      #rings {
         width: 35%;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -444,6 +444,83 @@ body {
 
       #ceremony-date {
         margin-bottom: 30px;
+      }
+    }
+
+    #parking-link {
+      margin-top: 30px;
+
+      svg {
+        height: 30px;
+        width: 30px;
+        margin-bottom: -4px;
+
+        @media #{$desktop} {
+          height: 40px;
+          width: 40px;
+          margin-bottom: -7px;
+        }
+      }
+
+      a {
+        font-size: 0.8em;
+        color: black;
+
+        &:hover {
+          text-decoration: none;
+          color: $base-color;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+
+        &:visited {
+          color: black;
+        }
+      }
+    }
+
+    #parking-content {
+      font-size: 0.8em;
+      padding: 0.3em;
+      width: auto;
+
+      ul {
+        margin-right: auto;
+        width: 100%;
+
+        li {
+          width: 180px;
+
+          @media #{$tablet} {
+            width: 200px;
+          }
+
+          @media #{$desktop} {
+            width: 230px;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+
+          a:hover {
+            color: $base-color;
+          }
+
+          a:visited {
+            text-decoration: none;
+          }
+
+          margin: auto;
+          text-align: left;
+
+          img {
+            width: 22px;
+          }
+        }
       }
     }
 
@@ -535,6 +612,7 @@ body {
       font-size: 1.5em;
       margin-bottom: 0;
       margin-top: 10px;
+
       @media #{$tablet} {
         font-size: 1.8em;
       }
@@ -594,10 +672,11 @@ body {
       text-decoration: none;
     }
 
-    #trip-link{
-      color: #ffffff;
+    #trip-link {
+      color: #fff;
       font-size: 1.5em;
       line-height: 2em;
+
       &:hover {
         text-decoration: none;
         cursor: pointer;
@@ -605,7 +684,8 @@ body {
       }
     }
 
-    #gift-modal, #trip-modal {
+    #gift-modal,
+    #trip-modal {
       color: black;
       font-family: savoye;
 
