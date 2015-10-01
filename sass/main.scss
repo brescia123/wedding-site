@@ -463,7 +463,7 @@ body {
       }
 
       a {
-        font-size: 0.8em;
+        font-size: 0.9em;
         color: black;
 
         &:hover {
@@ -482,7 +482,7 @@ body {
     }
 
     #parking-content {
-      font-size: 0.8em;
+      font-size: 0.9em;
       padding: 0.3em;
       width: auto;
 
@@ -491,14 +491,14 @@ body {
         width: 100%;
 
         li {
-          width: 180px;
+          width: 220px;
 
           @media #{$tablet} {
-            width: 200px;
+            width: 250px;
           }
 
           @media #{$desktop} {
-            width: 230px;
+            width: 280px;
           }
 
           a {
@@ -513,7 +513,6 @@ body {
           a:visited {
             text-decoration: none;
           }
-
           margin: auto;
           text-align: left;
 
@@ -587,6 +586,28 @@ body {
     height: 100%;
     background-color: $base-color-4;
     opacity: 0.6;
+  }
+
+  .trip-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.95;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+
+    img {
+      height: 100%;
+      margin: auto;
+      padding: 20px;
+    }
   }
 
   .gift-content {
