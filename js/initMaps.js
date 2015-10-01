@@ -62,12 +62,15 @@ var initPartyMap = function() {
           location: place.geometry.location
         });
         marker.setVisible(true);
+        marker.link = 'https://goo.gl/maps/bVuCNZWHABN2';
 
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          place.formatted_address);
+        infowindow.setContent('<div><div style="font-weight:bold; font-size:1.1em;">' + place.name + '</div>' +
+          '<a href="' + marker.link + '" target="_blank">' + place.formatted_address + '</a>');
         infowindow.open(map, marker);
 
         google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent('<div><div style="font-weight:bold; font-size:1.1em;">' + place.name + '</div>' +
+            '<a href="' + marker.link + '" target="_blank">' + place.formatted_address + '</a>') + '</div>';
           infowindow.open(map, this);
         });
       }
