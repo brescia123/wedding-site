@@ -596,15 +596,27 @@ body {
     height: 100%;
     background-color: white;
     opacity: 0.95;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
     display: none;
 
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1em;
+      cursor: pointer;
+    }
+
+    h1 {
+      height: 20%;
+      padding: 1em;
+      font-size: 1.9em;
+      vertical-align: middle;
+    }
+
     img {
-      height: 100%;
+      max-height: 80%;
+      height: auto;
+      width: auto;
       margin: auto;
       padding: 20px;
     }

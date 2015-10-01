@@ -1,7 +1,10 @@
 $(function() {
 
   $('#trip-link').click(function () {
-    $('.trip-overlay').show(200);
+    $('.trip-overlay').fadeIn('fast');
   });
 
+  $('#close-trip').click(function () {
+    $('.trip-overlay').fadeOut('fast');
+  });
 });
